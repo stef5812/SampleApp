@@ -1,0 +1,21 @@
+{
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "terminal.integrated.tabs.enabled": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb",
+        "*.sqlite3": "default"
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.colorTheme": "Visual Studio Light",
+    "files.associations": {
+        "*.html": "html"
+    },
+    "git.confirmSync": false,
+    "settingsSync.ignoredSettings": [
+        "githubPullRequests.remotes"
+    ],
+    "editor.largeFileOptimizations": false
+}

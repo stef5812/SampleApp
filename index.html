@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Stefs OP Matcher</title>
+        <meta name="author" content="Stefan Dodds">
+        <meta name="description" content="Mapping Volunteers and OPs">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <link rel="icon" type="image/png" href="libs/images/favicon.png">
+
+         <!-- add in the css to clear old settings -->
+        <link rel="stylesheet" href="libs/css/normalize.css" />
+
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="libs/css/easybarbtn.css">    
+        <link rel="stylesheet" href="libs/css/control-loading.css" />
+        <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css" />   
+        <link rel="stylesheet" href="libs/css/easy-button.css">
+        
+        <!-- add in the css to set new styles -->
+        <link rel="stylesheet" href="libs/css/style.css">
+    </head>
+    <body>
+        <div id="preloader"></div>
+          
+                <div class="header-image">
+
+                    <!--Nav bar with extra features-->
+                    <nav id="navWrap">   
+                        <div id="cont-container">                                         
+                            <div class="page" id="map">
+                                <button id="refreshButton">Refresh Button</button>
+                                <div class="container">
+                                    <!--html elements to hold data-->
+                                    <input id="inpLat" size="5" value="51.743798" type="text"><br>
+                                    <input id="inpLng" size="5" value="-9.913991" type="text"><br>   
+                                    
+                                    <pre id="out"><p>File contents will appear here</p></pre>                                    
+
+                                </div>
+                            </div>          
+                        </div>
+                    </div>
+                </div>
+                        
+
+
+            <!-- Scripts -->
+        <script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="libs/js/custom-selectbox.js"></script>
+         <!-- Make sure you put this AFTER Leaflet's CSS -->
+         <script src="node_modules/leaflet/dist/leaflet.js"></script> 
+         <script src="libs/js/easybutton.js"></script>
+         <!--<script type="application/javascript" src="libs/js/readOPCsv.js"></script>       
+         <script type="application/javascript" src="libs/js/loadOPs.js"></script>-->
+
+         <script type="application/javascript" src="libs/js/ParseMOWdata.js"></script>
+         <script type="application/javascript" src="libs/js/ParseNURSEdata.js"></script>
+         <script type="application/javascript" src="libs/js/ParseHEALTHdata.js"></script>
+         <script type="application/javascript" src="libs/js/ParseDENTdata.js"></script>
+         <script type="application/javascript" src="libs/js/ParsePHARMdata.js"></script>
+         <script type="application/javascript" src="libs/js/ParseHOSPdata.js"></script>
+         <script type="application/javascript" src="libs/js/ParseOPdata.js"></script>
+         <script type="application/javascript" src="libs/js/ParseVOLdata.js"></script>
+         <script type="application/javascript" src="libs/js/load.js"></script>	
+         <script type="application/javascript" src="libs/js/map.js"></script>	
+    </body>
+</html>

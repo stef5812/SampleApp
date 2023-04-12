@@ -1,0 +1,452 @@
+  #preloader {
+    position:absolute;
+    top: 50%;
+    left: 50% ;
+    z-index:9999;
+    overflow: hidden;
+    background: #fff;
+  }
+  
+  #preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30%px);
+    left: calc(50% - 30%px);
+    border: 6px solid #f2f2f2;
+    border-top: 6px solid #56829e;
+    border-radius: 50%;
+    width:60px;
+    height:60px;
+    -webkit-animation: animate-pre-loader 1s linear infinite;
+    animation: animate-preloader 1s infinite;
+  }
+  
+  @-webkit-keyframes animate-preloader {
+    0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes animate-preloader {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  .styleCountryPopup .leaflet-popup-content-wrapper,
+  .styleCountryPopup .leaflet-popup-tip {
+      background-color: transparent;
+      padding: 8px;
+  }
+
+  /* Document Header */
+  .header-image {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .header-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+   
+  .header-image-wrapper {
+    background-image: url(http://www.steamatic.com/images/footer-pattern-grey.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+   
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #countriesjson {
+    background-color: white;
+    color: black;
+    z-index: 999;
+  }
+
+
+
+  /* map popup styles */
+
+  #map { 
+    margin-bottom: 15px;
+    height: 100vh;
+    width: 100%;
+  }
+
+
+  /*another-popop style*/
+.OP-popup .leaflet-popup-content-wrapper {
+  background: rgb(247, 2, 2);
+  width: 300px;
+  color:#fff;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Calibri';
+  line-height: 24px;
+  border-radius: 10px 10px 10px 10px;
+  padding: 10px;
+  margin: 10px;
+    border:2px outset rgb(250, 250, 250);
+    -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+}
+.OP-popup .leaflet-popup-content-wrapper a {
+  color: rgba(200, 200, 200, 0.1);
+}
+.OP-popup .leaflet-popup-tip-container {
+  width: 50px;
+  height: 15px;
+}
+.OP-popup .leaflet-popup-tip {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+
+  /*another-popop style*/
+  .VOL-popup .leaflet-popup-content-wrapper {
+    background: #fff;
+    width: 300px;
+    color: black;
+    font-size: 12px;
+    font-family: 'Calibri';
+    line-height: 24px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 5px 5px 5px 5px #888888;
+    padding: 10px;
+      border:2px outset rgb(4, 250, 45);
+      -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+      -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+  }
+  .VOL-popup .leaflet-popup-content-wrapper a {
+    color: rgba(200, 200, 200, 0.1);
+  }
+  .VOL-popup .leaflet-popup-tip-container {
+    width: 50px;
+    height: 15px;
+  }
+  .VOL-popup .leaflet-popup-tip {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  
+
+  .weathertitle {
+    position: relative;
+    z-index: 1;
+    background-color: #2561a0;
+    height: 60px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border:1px solid brown;
+    border-radius: 50px 0px 50px 0px;
+    float:left;
+    padding: 5px;
+    text-align: center;
+    }
+    .weatherLayer1 {
+      position: relative;
+      z-index: 1;
+      background-color: #2561a0;
+      height: 110px;
+      width: 45%;
+      color: black;
+      font-weight: bold;
+      font-size: 25px;
+      float:left;
+      padding: 5px;
+      color: white;
+      text-align: center;
+      }    
+
+    .weatherLayer2 {
+      position: relative;
+      z-index: 1;
+      background-color: #2561a0;
+      height: 110px;
+      width: 45%;
+      color: black;
+      font-weight: bold;
+      font-size: 20px;
+      float:right;
+      padding: 5px;
+      color: white;
+      text-align: center;
+      }
+
+  
+    .weathertemp {
+      position: relative;
+      z-index: 1;
+      background-color: #2561a0;
+      height: 110px;
+      width: 45%;
+      color: black;
+      font-weight: bold;
+      font-size: 20px;
+      float:left;
+      padding: 5px;
+      color: white;
+      text-align: center;
+      }  
+
+      .weatherspeed {
+        position: relative;
+        z-index: 1;
+        background-color: #2561a0;
+        height: 110px;
+        width: 45%;
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+        float:right;
+        padding: 5px;
+        color: white;
+        text-align: center;
+        }      
+
+        .weatherfooter {
+          position: relative;
+          z-index: 1;
+          background-color: #2561a0;
+          height: 20px;
+          width: 100%;
+          color: white;
+          font-weight: bold;
+          font-size: 15px;
+          border:1px solid brown;
+          border-radius: 50px 0px 50px 0px;
+          float:left;
+          padding: 5px;
+          text-align: center;
+          }
+  
+      .weatherfooter a:link { color: red; }
+      .weatherfooter a:visited { color: purple; }
+      .weatherfooter a:hover { color: greenyellow; }
+      .weatherfooter a:active { color: yellow; }
+
+
+        .currencyFooter a:link { color: red; }
+        .currencyFooter a:visited { color: purple; }
+        .currencyFooter a:hover { color: greenyellow; }
+        .currencyFooter a:active { color: yellow; }
+
+
+        .issLayer1 {
+          position: relative;
+          z-index: 1;
+          background-color: rgb(137, 212, 137);
+          height: 50px;
+          width: 100%;
+          color: black;
+          font-weight: bold;
+          font-size: 15px;
+          padding: 5px;
+          margin: 5px;
+          color: black;
+          text-align: center;
+          border-radius: 5px 5px 5px 5px;
+          border:1px solid brown;
+          }   
+
+    .ank{
+      font-size: 2.5em;
+    } 
+
+    .umbrella {
+      font-size: 2.5em;
+    }
+
+    .curr {
+      font-size: 2.5em;
+    }   
+
+    .ISS {
+      font-size: 1em;
+    }  
+
+
+  .radioTitleIcon {
+    position: relative;
+    
+    z-index: 1;
+    background-color: rgb(251, 253, 251);
+    height: 100px;
+    width: 100px;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px 5px 5px 5px;
+    border:1px solid brown;
+    padding: 5px;
+    margin: 10px;
+    border:8px outset rgb(219, 15, 15); 
+    text-align: center;
+    }
+
+      .radioTitle {
+        position: relative;
+        z-index: 1;
+        background-color: rgb(251, 253, 251);
+        height: 20px;
+        width: 100%;
+        color: black;
+        font-weight: bold;
+        font-size: 15px;
+        border-radius: 5px 5px 5px 5px;
+        border:1px solid brown;
+        padding: 5px;
+        margin: 10px;
+        text-align: center;
+        }
+
+        .covidrLayer1 {
+          position: relative;
+          z-index: 1;
+          background-color: rgb(137, 212, 137);
+          height: 50px;
+          width: 100%;
+          color: black;
+          font-weight: bold;
+          font-size: 15px;
+          padding: 5px;
+          margin: 5px;
+          color: black;
+          text-align: center;
+          border-radius: 5px 5px 5px 5px;
+          border:1px solid brown;
+          }            
+
+        .radioFooter{
+          position: relative;
+          z-index: 1;
+          height: 20px;
+          width: 100%;
+          color: black;
+          font-weight: bold;
+          font-size: 15px;
+          padding: 5px;
+          margin: 100px 25px 25px 25px;
+          text-align: center;
+          background-color: white;
+          border-radius: 5px 5px 5px 5px;
+          border:1px solid brown;
+          }        
+
+        .radioFooter a:link { color: red; }
+        .radioFooter a:visited { color: purple; }
+        .radioFooter a:hover { color: greenyellow; }
+        .radioFooter a:active { color: yellow; }
+
+
+
+  .triposoTitleIcon {
+    position: relative;
+    z-index: 1;
+    background-color: rgb(251, 253, 251);
+    height: 100px;
+    width: 100px;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px 5px 5px 5px;
+    border:1px solid brown;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    }
+
+      .triposoTitle {
+        position: relative;
+        z-index: 1;
+        background-color: rgb(251, 253, 251);
+        height: 100px;
+        width: 100%;
+        color: black;
+        font-weight: bold;
+        font-size: 15px;
+        border-radius: 5px 5px 5px 5px;
+        border:1px solid brown;
+        padding: 5px;
+        margin: 10px;
+        text-align: center;
+        }
+
+        .triposoLayer1 {
+          position: relative;
+          z-index: 1;
+          background-color: rgb(137, 212, 137);
+          height: 50px;
+          width: 100%;
+          color: black;
+          font-weight: bold;
+          font-size: 15px;
+          padding: 5px;
+          margin: 5px;
+          color: black;
+          text-align: center;
+          border-radius: 5px 5px 5px 5px;
+          border:1px solid brown;
+          }            
+
+        .triposoFooter{
+          position: relative;
+          z-index: 1;
+          height: 20px;
+          width: 100%;
+          color: black;
+          font-weight: bold;
+          font-size: 15px;
+          padding: 5px;
+          margin: 100px 25px 25px 25px;
+          text-align: center;
+          background-color: white;
+          border-radius: 5px 5px 5px 5px;
+          border:1px solid brown;
+          }     
+
+figure {
+  border-top: none;
+  padding-top: 0;
+}
+figcaption {
+  padding: 0.5em;
+  border: thin silver solid;
+  border-bottom: none;
+}             
+
+        .radioFooter a:link { color: red; }
+        .radioFooter a:visited { color: purple; }
+        .radioFooter a:hover { color: greenyellow; }
+        .radioFooter a:active { color: yellow; }
+
