@@ -37,6 +37,7 @@ function readDENTFile(file)
                 
                 FNresult = '';
                 SNresult = '';
+                extraText = '';  
 
                 //HOSPdropdown += "<select>";
                 
@@ -54,7 +55,14 @@ function readDENTFile(file)
                     //console.log(varX[i] + "STEF1");    
                     varY = getFields(formedArr, "lon");
                     //console.log(varY[i] + "STEF2"); 
-                    
+
+                    if (Link[i] != undefined){
+                        //console.log("def" + Link[i])
+                        extraText = "<a href='" + Link[i] + "' target='_blank'><img src='libs/icons/dentist.png' style='width:40px;height:40px;'><br>"+FNresult[i]+"<br>"+EIRresult[i]+"<br>";
+                    } else {
+                        //console.log("undef" + Link[i])
+                        extraText = "<img src='libs/icons/dentist.png' style='width:40px;height:40px;'><br>"+FNresult[i]+"<br>"+EIRresult[i]+"<br>";
+                    }                       
                     if(varX[i] != undefined){getDENTLatLon(varX[i], varY[i], FNresult[i], Address[i])}
 
                     //console.log(FNresult, LNresult, EIRresult);
@@ -99,7 +107,7 @@ function customTip(ShortTip) {
         var DENTDatashow =
         {
           'maxWidth': '400',
-          'className' : 'HOSP-popup'
+          'className' : 'DENT-popup'
         }              
 
                 DENTIcon = L.icon({
@@ -115,7 +123,7 @@ function customTip(ShortTip) {
 
 
 //            var OPmarker = L.marker([thisLat, thisLng], {icon: OPIcon}).addTo(OpTBMMarkers)
-        var markerPopup = DENTMarker.bindPopup('Name : ' + DENTname + ' ' + ":<br><br>" + extraText, DENTDatashow)
+        var markerPopup = DENTMarker.bindPopup(extraText, DENTDatashow)
 
         varTooltip = DENTname;
         //if (Pets == "Yes"){

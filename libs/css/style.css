@@ -101,17 +101,17 @@
 
   /*another-popop style*/
 .OP-popup .leaflet-popup-content-wrapper {
-  background: rgb(247, 2, 2);
+  background: #fff;
   width: 300px;
-  color:#fff;
+  color:rgb(11, 0, 0);
   font-size: 12px;
   font-weight: bold;
   font-family: 'Calibri';
   line-height: 24px;
-  border-radius: 10px 10px 10px 10px;
-  padding: 10px;
-  margin: 10px;
-    border:2px outset rgb(250, 250, 250);
+  border-radius: 50px 0px 150px 0px;
+  padding: 3px;
+  margin: -5px;
+    border:5px outset rgb(247, 2, 2);
     -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
     -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
 }
@@ -133,14 +133,15 @@
   .VOL-popup .leaflet-popup-content-wrapper {
     background: #fff;
     width: 300px;
-    color: black;
+    color:rgb(11, 0, 0);
     font-size: 12px;
+    font-weight: bold;
     font-family: 'Calibri';
     line-height: 24px;
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 5px 5px 5px 5px #888888;
+    border-radius: 150px 0px 50px 0px;
     padding: 10px;
-      border:2px outset rgb(4, 250, 45);
+    margin: -5px;
+      border:5px outset rgb(4, 250, 45);
       -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
       -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
   }
@@ -153,300 +154,261 @@
   }
   .VOL-popup .leaflet-popup-tip {
     background: transparent;
+    color: black;
     border: none;
     box-shadow: none;
   }
-  
 
-  .weathertitle {
-    position: relative;
-    z-index: 1;
-    background-color: #2561a0;
-    height: 60px;
-    width: 100%;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border:1px solid brown;
-    border-radius: 50px 0px 50px 0px;
-    float:left;
-    padding: 5px;
-    text-align: center;
+    /*another-popop style*/
+    .MOW-popup .leaflet-popup-content-wrapper {
+      background: #fff;
+      width: 300px;
+      color:rgb(11, 0, 0);
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Calibri';
+      text-align: center;
+      line-height: 24px;
+      border-radius: 75px 75px 25px 25px;
+      padding: 3px;
+      margin: -5px;
+        border:5px outset rgb(51, 158, 176);
+        -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+        -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
     }
-    .weatherLayer1 {
-      position: relative;
-      z-index: 1;
-      background-color: #2561a0;
-      height: 110px;
-      width: 45%;
-      color: black;
-      font-weight: bold;
-      font-size: 25px;
-      float:left;
-      padding: 5px;
-      color: white;
-      text-align: center;
-      }    
-
-    .weatherLayer2 {
-      position: relative;
-      z-index: 1;
-      background-color: #2561a0;
-      height: 110px;
-      width: 45%;
-      color: black;
-      font-weight: bold;
-      font-size: 20px;
-      float:right;
-      padding: 5px;
-      color: white;
-      text-align: center;
-      }
-
-  
-    .weathertemp {
-      position: relative;
-      z-index: 1;
-      background-color: #2561a0;
-      height: 110px;
-      width: 45%;
-      color: black;
-      font-weight: bold;
-      font-size: 20px;
-      float:left;
-      padding: 5px;
-      color: white;
-      text-align: center;
-      }  
-
-      .weatherspeed {
-        position: relative;
-        z-index: 1;
-        background-color: #2561a0;
-        height: 110px;
-        width: 45%;
-        color: black;
-        font-weight: bold;
-        font-size: 20px;
-        float:right;
-        padding: 5px;
-        color: white;
-        text-align: center;
-        }      
-
-        .weatherfooter {
-          position: relative;
-          z-index: 1;
-          background-color: #2561a0;
-          height: 20px;
-          width: 100%;
-          color: white;
-          font-weight: bold;
-          font-size: 15px;
-          border:1px solid brown;
-          border-radius: 50px 0px 50px 0px;
-          float:left;
-          padding: 5px;
-          text-align: center;
-          }
-  
-      .weatherfooter a:link { color: red; }
-      .weatherfooter a:visited { color: purple; }
-      .weatherfooter a:hover { color: greenyellow; }
-      .weatherfooter a:active { color: yellow; }
-
-
-        .currencyFooter a:link { color: red; }
-        .currencyFooter a:visited { color: purple; }
-        .currencyFooter a:hover { color: greenyellow; }
-        .currencyFooter a:active { color: yellow; }
-
-
-        .issLayer1 {
-          position: relative;
-          z-index: 1;
-          background-color: rgb(137, 212, 137);
-          height: 50px;
-          width: 100%;
-          color: black;
-          font-weight: bold;
-          font-size: 15px;
-          padding: 5px;
-          margin: 5px;
-          color: black;
-          text-align: center;
-          border-radius: 5px 5px 5px 5px;
-          border:1px solid brown;
-          }   
-
-    .ank{
-      font-size: 2.5em;
-    } 
-
-    .umbrella {
-      font-size: 2.5em;
+    .MOW-popup .leaflet-popup-content-wrapper a {
+      color: rgba(200, 200, 200, 0.1);
     }
-
-    .curr {
-      font-size: 2.5em;
-    }   
-
-    .ISS {
-      font-size: 1em;
+    .MOW-popup .leaflet-popup-tip-container {
+      width: 50px;
+      height: 15px;
+    }
+    .MOW-popup .leaflet-popup-tip {
+      background: transparent;
+      border: none;
+      box-shadow: none;
     }  
-
-
-  .radioTitleIcon {
-    position: relative;
-    
-    z-index: 1;
-    background-color: rgb(251, 253, 251);
-    height: 100px;
-    width: 100px;
-    color: black;
+  /*another-popop style*/
+  .NURSE-popup .leaflet-popup-content-wrapper {
+    background: #fff;
+    width: 300px;
+    color:rgb(11, 0, 0);
+    font-size: 12px;
     font-weight: bold;
-    font-size: 15px;
-    border-radius: 5px 5px 5px 5px;
-    border:1px solid brown;
-    padding: 5px;
-    margin: 10px;
-    border:8px outset rgb(219, 15, 15); 
+    font-family: 'Calibri';
     text-align: center;
-    }
-
-      .radioTitle {
-        position: relative;
-        z-index: 1;
-        background-color: rgb(251, 253, 251);
-        height: 20px;
-        width: 100%;
-        color: black;
-        font-weight: bold;
-        font-size: 15px;
-        border-radius: 5px 5px 5px 5px;
-        border:1px solid brown;
-        padding: 5px;
-        margin: 10px;
-        text-align: center;
-        }
-
-        .covidrLayer1 {
-          position: relative;
-          z-index: 1;
-          background-color: rgb(137, 212, 137);
-          height: 50px;
-          width: 100%;
-          color: black;
-          font-weight: bold;
-          font-size: 15px;
-          padding: 5px;
-          margin: 5px;
-          color: black;
-          text-align: center;
-          border-radius: 5px 5px 5px 5px;
-          border:1px solid brown;
-          }            
-
-        .radioFooter{
-          position: relative;
-          z-index: 1;
-          height: 20px;
-          width: 100%;
-          color: black;
-          font-weight: bold;
-          font-size: 15px;
-          padding: 5px;
-          margin: 100px 25px 25px 25px;
-          text-align: center;
-          background-color: white;
-          border-radius: 5px 5px 5px 5px;
-          border:1px solid brown;
-          }        
-
-        .radioFooter a:link { color: red; }
-        .radioFooter a:visited { color: purple; }
-        .radioFooter a:hover { color: greenyellow; }
-        .radioFooter a:active { color: yellow; }
+    line-height: 24px;
+    border-radius: 150px 150px 0px 0px;
+    padding: 3px;
+    margin: -5px;
+      border:5px outset rgb(51, 158, 176);
+      -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+      -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+  }
+  .NURSE-popup .leaflet-popup-content-wrapper a {
+    color: rgba(200, 200, 200, 0.1);
+  }
+  .NURSE-popup .leaflet-popup-tip-container {
+    width: 50px;
+    height: 15px;
+  }
+  .NURSE-popup .leaflet-popup-tip {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }  
 
 
-
-  .triposoTitleIcon {
-    position: relative;
-    z-index: 1;
-    background-color: rgb(251, 253, 251);
-    height: 100px;
-    width: 100px;
-    color: black;
+  /*another-popop style*/
+  .HEALTH-popup .leaflet-popup-content-wrapper {
+    background: #fff;
+    width: 300px;
+    color:rgb(11, 0, 0);
+    font-size: 12px;
     font-weight: bold;
-    font-size: 15px;
-    border-radius: 5px 5px 5px 5px;
-    border:1px solid brown;
-    padding: 5px;
-    margin: 10px;
+    font-family: 'Calibri';
     text-align: center;
-    }
+    line-height: 24px;
+    border-radius: 0px 0px 150px 150px;
+    padding: 3px;
+    margin: -5px;
+      border:5px outset rgb(51, 158, 176);
+      -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+      -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+  }
+  .HEALTH-popup .leaflet-popup-content-wrapper a {
+    color: rgba(200, 200, 200, 0.1);
+  }
+  .HEALTH-popup .leaflet-popup-tip-container {
+    width: 50px;
+    height: 15px;
+  }
+  .HEALTH-popup .leaflet-popup-tip {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }  
+  
+  /*another-popop style*/
+  .GARDA-popup .leaflet-popup-content-wrapper {
+    background: #fff;
+    width: 300px;
+    color:rgb(11, 0, 0);
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Calibri';
+    text-align: center;
+    line-height: 24px;
+    border-radius: 200px 200px 200px 200px;
+    padding: 3px;
+    margin: -25px;
+      border:5px outset rgb(248, 50, 5);
+      -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+      -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+  }
+  .GARDA-popup .leaflet-popup-content-wrapper a {
+    color: rgba(200, 200, 200, 0.1);
+  }
+  .GARDA-popup .leaflet-popup-tip-container {
+    width: 50px;
+    height: 15px;
+  }
+  .GARDA-popup .leaflet-popup-tip {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }    
 
-      .triposoTitle {
-        position: relative;
-        z-index: 1;
-        background-color: rgb(251, 253, 251);
-        height: 100px;
-        width: 100%;
-        color: black;
-        font-weight: bold;
-        font-size: 15px;
-        border-radius: 5px 5px 5px 5px;
-        border:1px solid brown;
-        padding: 5px;
-        margin: 10px;
-        text-align: center;
-        }
+  
+  /*another-popop style*/
+  .DENT-popup .leaflet-popup-content-wrapper {
+    background: #fff;
+    width: 300px;
+    color:rgb(11, 0, 0);
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Calibri';
+    text-align: center;
+    line-height: 24px;
+    border-radius: 20px 20px 20px 20px;
+    padding: 3px;
+    margin: -25px;
+      border:2px outset rgb(248, 50, 5);
+      -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+      -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+  }
+  .DENT-popup .leaflet-popup-content-wrapper a {
+    color: rgba(200, 200, 200, 0.1);
+  }
+  .DENT-popup .leaflet-popup-tip-container {
+    width: 50px;
+    height: 15px;
+  }
+  .DENT-popup .leaflet-popup-tip {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  } 
 
-        .triposoLayer1 {
-          position: relative;
-          z-index: 1;
-          background-color: rgb(137, 212, 137);
-          height: 50px;
-          width: 100%;
-          color: black;
-          font-weight: bold;
-          font-size: 15px;
-          padding: 5px;
-          margin: 5px;
-          color: black;
-          text-align: center;
-          border-radius: 5px 5px 5px 5px;
-          border:1px solid brown;
-          }            
+  /*another-popop style*/
+  .PHAR-popup .leaflet-popup-content-wrapper {
+    background: #fff;
+    width: 300px;
+    color:rgb(11, 0, 0);
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Calibri';
+    text-align: center;
+    line-height: 24px;
+    border-radius: 20px 20px 20px 20px;
+    padding: 3px;
+    margin: -25px;
+      border:5px outset rgb(80, 201, 70);
+      -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+      -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+  }
+  .PHAR-popup .leaflet-popup-content-wrapper a {
+    color: rgba(200, 200, 200, 0.1);
+  }
+  .PHAR-popup .leaflet-popup-tip-container {
+    width: 50px;
+    height: 15px;
+  }
+  .PHAR-popup .leaflet-popup-tip {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  } 
+  
+  /*another-popop style*/
+  .HOSP-popup .leaflet-popup-content-wrapper {
+    background: #fff;
+    width: 300px;
+    color:rgb(11, 0, 0);
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Calibri';
+    text-align: center;
+    line-height: 24px;
+    border-radius: 20px 20px 20px 20px;
+    padding: 3px;
+    margin: -25px;
+      border:5px outset rgb(248, 50, 5);
+      -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+      -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+  }
+  .HOSP-popup .leaflet-popup-content-wrapper a {
+    color: rgba(200, 200, 200, 0.1);
+  }
+  .HOSP-popup .leaflet-popup-tip-container {
+    width: 50px;
+    height: 15px;
+  }
+  .HOSP-popup .leaflet-popup-tip {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }     
 
-        .triposoFooter{
-          position: relative;
-          z-index: 1;
-          height: 20px;
-          width: 100%;
-          color: black;
-          font-weight: bold;
-          font-size: 15px;
-          padding: 5px;
-          margin: 100px 25px 25px 25px;
-          text-align: center;
-          background-color: white;
-          border-radius: 5px 5px 5px 5px;
-          border:1px solid brown;
-          }     
+  /*another-popop style*/
+  .AUTH-popup .leaflet-popup-content-wrapper {
+    background: #fff;
+    width: 300px;
+    color:rgb(11, 0, 0);
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Calibri';
+    text-align: center;
+    line-height: 24px;
+    border-radius: 20px 20px 20px 20px;
+    padding: 3px;
+    margin: -25px;
+      border:5px outset rgb(0, 80, 75);
+      -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+      -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+  }
+  .AUTH-popup .leaflet-popup-content-wrapper a {
+    color: rgba(200, 200, 200, 0.1);
+  }
+  .AUTH-popup .leaflet-popup-tip-container {
+    width: 50px;
+    height: 15px;
+  }
+  .AUTH-popup .leaflet-popup-tip {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }   
 
-figure {
-  border-top: none;
-  padding-top: 0;
+/* CHanging icon on layers section */
+.leaflet-top.leaflet-right .leaflet-control-layers:nth-child(2) .leaflet-control-layers-toggle {
+  background-image: url("../icons/op-small.png");
 }
-figcaption {
-  padding: 0.5em;
-  border: thin silver solid;
-  border-bottom: none;
-}             
 
-        .radioFooter a:link { color: red; }
-        .radioFooter a:visited { color: purple; }
-        .radioFooter a:hover { color: greenyellow; }
-        .radioFooter a:active { color: yellow; }
+.leaflet-top.leaflet-right .leaflet-control-layers:nth-child(3) .leaflet-control-layers-toggle {
+  background-image: url("../icons/info.png");
+}
 
+/* .leaflet-top.leaflet-right .leaflet-control-layers:nth-child(4) .leaflet-control-layers-toggle {
+  background-image: url("../icons/info.png");
+} */

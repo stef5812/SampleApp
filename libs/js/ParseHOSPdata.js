@@ -37,6 +37,7 @@ function readHospitalsFile(file)
                 
                 FNresult = '';
                 SNresult = '';
+                var Link = '';
 
                 //HOSPdropdown += "<select>";
                 
@@ -46,14 +47,24 @@ function readHospitalsFile(file)
                     
                     FNresult = getFields(formedArr, "name");
                     //console.log(FNresult[i]);
-                    Address = getFields(formedArr, "address");
-                    //console.log(Address[i]);                                    
+                                   
                     EIRresult = getFields(formedArr, "eircode");
 
                     varX = getFields(formedArr, "lat");
                     //console.log(varX[i] + "STEF1");    
                     varY = getFields(formedArr, "lon");
-                    //console.log(varY[i] + "STEF2"); 
+                                       
+                    Link = getFields(formedArr, "Link");
+
+                    Address = getFields(formedArr, "address");
+                    //console.log(Address[i]);                      
+
+                    //console.log(Link[i] + "STEF2"); 
+                    if (Link[i] != undefined){
+                        extraText = "<a href='" + Link[i] + "' target='_blank'><img src='libs/icons/hospital.png' style='width:40px;height:40px;'></a><br>"+FNresult[i]+"<br>"+EIRresult[i]+"<br>";
+                    } else {
+                        extraText = "<img src='libs/icons/hospital.png' style='width:40px;height:40px;'><br>"+FNresult[i]+"<br>"+EIRresult[i]+"<br>";
+                    }
                     
                     if(varX[i] != undefined){
                         getRealLatLon(varX[i], varY[i], FNresult[i], Address[i])
@@ -117,7 +128,7 @@ function customTip(ShortTip) {
 
 
 //            var OPmarker = L.marker([thisLat, thisLng], {icon: OPIcon}).addTo(OpTBMMarkers)
-        var markerPopup = HOSPMarker.bindPopup('Name : ' + HOSPname + ' ' + ":<br><br>Address : " + Address + "<br><br>" + extraText,HOSPDatashow)
+        var markerPopup = HOSPMarker.bindPopup(extraText,HOSPDatashow)
 
         varTooltip = HOSPname
         //if (Pets == "Yes"){

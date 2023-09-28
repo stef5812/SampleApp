@@ -11,8 +11,8 @@ var map = L.map('map').setView([$('#inpLat').val(), $('#inpLng').val()], 13);
 map.options.minZoom = 1;
 map.options.maxZoom = 14;
 
-var southWest = L.latLng(-89.98155760646617, -180),
-northEast = L.latLng(89.99346179538875, 180);
+var southWest = L.latLng(51.24037788508423, -11.429811034611902),
+northEast = L.latLng(55.39076840992948, -4.870973557236349);
 var bounds = L.latLngBounds(southWest, northEast);
 
 map.setMaxBounds(bounds);
@@ -170,6 +170,13 @@ var DENTMarkers = L.featureGroup();
 var HEALTHMarkers = L.featureGroup();
 var NURSEMarkers = L.featureGroup();
 var MOWMarkers = L.featureGroup();
+var GARDAMarkers = L.featureGroup();
+var CHIMEMarkers = L.featureGroup();
+var NCBIMarkers = L.featureGroup();
+var ALZMarkers = L.featureGroup();
+var WHEELMarkers = L.featureGroup();
+var MABSMarkers = L.featureGroup();
+var AUTHMarkers = L.featureGroup();
 
 var baseLayer = {
     "osm": osm,
@@ -180,24 +187,47 @@ var myMapLayers1 = {
 
 };
 
+
+
+
+
 var overlay1 = {
-    "homeMarker": homeMarker,
-    "OP To be matched": OpTBMMarkers,
-    "OP To be re-matched": OpTBRMMarkers,
-    "OP's with Active Matches": OpAMarkers,
-    "Vol To be matched": VolTBMMarkers,
-    "Vol FInished Training": VolLMarkers,
-    "Vol with Active Matches": VolAMarkers,    
+    "<img src='libs/icons/loc.png' style='width:30px;height:30px;'> User Loc": homeMarker,
+    "<img src='libs/icons/OPicon.png' style='width:30px;height:30px;'> OP's TBM": OpTBMMarkers,
+    "<img src='libs/icons/OPicon-re.png' style='width:30px;height:30px;'> OP's TB re-M": OpTBRMMarkers,
+    "<img src='libs/icons/OPicon-active.png' style='width:30px;height:30px;'> OP's A M": OpAMarkers,
+    "<img src='libs/icons/VOLicon.png' style='width:30px;height:30px;'> Vol's TBM": VolTBMMarkers,
+    "<img src='libs/icons/VOLicon-L.png' style='width:30px;height:30px;'> Trained Vol's": VolLMarkers,
+    "<img src='libs/icons/VOLicon-active.png' style='width:30px;height:30px;'> Active Vol's": VolAMarkers,    
 };
 
 var overlay2 = {
-    "Hospitals": HOSPAMarkers,
-    "Pharmacies": PHARMAMarkers,
-    "Dentists": DENTMarkers,
-    "Health Centres": HEALTHMarkers,
-    "Nursing Homes": NURSEMarkers,
-    "Meals on Wheels": MOWMarkers,
+    "<img src='libs/icons/AUTH-icon.png' style='width:30px;height:30px;'> Authorities": AUTHMarkers,
+    "<img src='libs/icons/hospital-icon.png' style='width:30px;height:30px;'> Hospitals": HOSPAMarkers,
+    "<img src='libs/icons/Garda247.png' style='width:30px;height:30px;'> Garda": GARDAMarkers,
+    "<img src='libs/icons/phar.png' style='width:30px;height:30px;'> Pharmacies": PHARMAMarkers,
+    "<img src='libs/icons/health.png' style='width:30px;height:30px;'> Health Centres": HEALTHMarkers,
+    "<img src='libs/icons/nursing.png' style='width:30px;height:30px;'> Nursing Homes": NURSEMarkers,
+    "<img src='libs/icons/dentist.png' style='width:30px;height:30px;'> Dentists": DENTMarkers,    
+    "<img src='libs/icons/Chime.png' style='width:30px;height:30px;'> Chime": CHIMEMarkers,
+    "<img src='libs/icons/wheel.png' style='width:30px;height:30px;'> Wheelchair Assoc": WHEELMarkers,
+    "<img src='libs/icons/NCBI.png' style='width:30px;height:30px;'> NCBI Offices": NCBIMarkers,
+    "<img src='libs/icons/ALZ.png' style='width:30px;height:30px;'> Alzheimers Soc": ALZMarkers,    
+    "<img src='libs/icons/MABS.png' style='width:30px;height:30px;'> MABS": MABSMarkers, 
+    "<img src='libs/icons/MOW.png' style='width:30px;height:30px;'> Meals on Wheels": MOWMarkers,    
 };
+
+// var overlay3 = {
+//     "CHO1": CHO1,
+//     "CHO2": CHO2,
+//     "CHO3": CHO3,
+//     "CHO4": CHO4,
+//     "CHO5": CHO5,
+//     "CHO6": CHO6,
+//     "CHO7": CHO7,    
+//     "CHO8": CHO8,    
+//     "CHO9": CHO9, 
+// };
 
 var myMapLayers = {
     "osiris": osiris,
@@ -228,10 +258,10 @@ function onLocationFound(e) {
         .bindPopup("You are within " + radius + " meters from this point").openPopup();
 
         $('#inpLat').val(e.latlng.lat);
-        console.log("elon is : " + e.latlng.lat);
+        //console.log("elon is : " + e.latlng.lat);
         
         $('#inpLng').val(e.latlng.lng);
-        console.log("elat is : " + e.latlng.lng)
+        //console.log("elat is : " + e.latlng.lng)
 
     L.circle(e.latlng, radius).addTo(map);
 }
@@ -246,51 +276,21 @@ map.on('locationerror', onLocationError);
 map.locate({setView: true, maxZoom: 16});
 
 L.control.layers(myMapLayers, overlay, {collapsed : true}).addTo(map);
-L.control.layers(myMapLayers1, overlay1, {collapsed : true}).addTo(map);
+
+
+
+//L.control.layers(myMapLayers1, overlay1, {collapsed : true}).addTo(map);
 L.control.layers(myMapLayers1, overlay2, {collapsed : true}).addTo(map);
+//L.control.layers(myMapLayers1, overlay3, {collapsed : true}).addTo(map);
+
 
 function setSelectZoom(zLat, zLng) {
     map.setView([zLat, zLng], zoom);
 }
 
-//Adding markers to toolbox...
 
-var greenIcon = L.icon({
-    iconUrl: 'libs/icons/leaf-green.png',
-    shadowUrl: 'libs/icons/leaf-shadow.png',
-  
-    iconSize:     [38, 95], // size of the icon
-    shadowSize:   [50, 64], // size of the shadow
-    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-    shadowAnchor: [4, 62],  // the same for the shadow
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-  });
-  var redIcon = L.icon({
-    iconUrl: 'libs/icons/leaf-red.png',
-    shadowUrl: 'libs/icons/leaf-shadow.png',
-  
-    iconSize:     [38, 95], // size of the icon
-    shadowSize:   [50, 64], // size of the shadow
-    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-    shadowAnchor: [4, 62],  // the same for the shadow
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-  });
-  var yellowIcon = L.icon({
-    iconUrl: 'libs/icons/leaf-yellow.png',
-    shadowUrl: 'libs/icons/leaf-shadow.png',
-  
-    iconSize:     [38, 95], // size of the icon
-    shadowSize:   [50, 64], // size of the shadow
-    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-    shadowAnchor: [4, 62],  // the same for the shadow
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-  }); 
-
-  //add marker to map               
-
-//var helloPopup = L.popup().setContent('Hello World!');
  
-L.easyButton('fa-globe', function(btn, map){
+L.easyButton(function(btn, map){
     const fileInput = document.getElementById('csv')
     const readFile = () => {
       const reader = new FileReader()
@@ -305,25 +305,3 @@ L.easyButton('fa-globe', function(btn, map){
 }).addTo(map);
 
 
-var mylegend = L.control({ position: "bottomleft" });
-
-mylegend.onAdd = function(map) {
-  var div = L.DomUtil.create("div", "legend");
-  div.style.backgroundColor = "white";
-  div.style.border = "1px solid black";
-  div.style.borderRadius = "5px";
-  div.innerHTML += '<i style="background: #477AC2"></i><span><img src=\'libs/icons/OPicon.png\' width=\'25px\' > Ops </span><br>';
-  div.innerHTML += '<i style="background: #448D40"></i><span><img src=\'libs/icons/VOLicon.png\' width=\'25px\' > Vols</span><br>';
-  div.innerHTML += '<i style="background: #E6E696"></i><span><img src=\'libs/icons/hospital.png\' width=\'25px\' > Hospitals</span><br>';
-  div.innerHTML += '<i style="background: #E6E696"></i><span><img src=\'libs/icons/pharm.jpg\' width=\'25px\' > Pharmacy</span><br>';
-  div.innerHTML += '<i style="background: #E8E6E0"></i><span><img src=\'libs/icons/dentist.png\' width=\'25px\' > Dentists</span><br>';
-  div.innerHTML += '<i style="background: #FFFFFF"></i><span><img src=\'libs/icons/nursing.png\' width=\'25px\' > Care homes</span><br>';
-  div.innerHTML += '<i style="background: #FFFFFF"></i><span><img src=\'libs/icons/MOW.png\' width=\'25px\' > Meals on wheels</span><br>';
-  
-  
-  
-
-  return div;
-};
-
-mylegend.addTo(map);

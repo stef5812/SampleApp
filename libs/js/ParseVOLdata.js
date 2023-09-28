@@ -16,65 +16,100 @@ function readVOLTextFile(file)
                 //csvOPData = arrData;
                 //console.log("steffffffff");
                 //console.log(allText);
-                VOLdropdown += "<select>";
-
+                
                 const [keys, ...rest] = allText.trim().split('\n').map((item) => item.split(','))
     
                 const formedArr = rest.map((item) => {
                     const object = {}
                     keys.forEach((key, index) => object[key] = item.at(index))
                     //console.log(object);
-                    var result = getFields(object, "First Name"); // returns [ 1, 3, 5 ]
-                    //console.log(result);
+                    var result = getFields(object, "Surname"); // returns [ 1, 3, 5 ]
+                    //console.log("RES" + result);
                     iRecords = iRecords + 1;
                     return object
                 })
-                console.log(iRecords);
-
-                //go through the array, get lat, lon and add to map
-                //let result = '';
-                var coCode = '';
+                //console.log("Formed" + formedArr);
                 FNresult = '';
-                SNresult = '';
-                Visit = '';                
+                SNresult = ''; 
+                var imgPets = '';          
+                var imgSmk = '';
+                extraText = '';
                 
                 let i = 0;
                 
                 do {
-                                     
-                    FNresult = getFields(formedArr, "First Name");
-                    //console.log(FNresult[i]);
-                    LNresult = getFields(formedArr, "Last Name");
-                    //console.log(LNresult[i]);
-                    Visit = getFields(formedArr, "Visitation Role Status");
-                    //console.log(Visit[i]);                    
-                    var EIRresult = getFields(formedArr, "Eircode");
-                    coCode = EIRresult[i];
-                    //console.log(coCode);
+                    imgPets = '';          
+                    imgSmk = '';                 
+                    pets = getFields(formedArr, "Pets"); 
                     
+                    Age = getFields(formedArr, "Age");
+                    Sex = getFields(formedArr, "Sex");
+
+                    FNresult = getFields(formedArr, "First");
+                    //console.log(FNresult[i]);
+                    LNresult = getFields(formedArr, "Surname");
+                    //console.log(LNresult[i]);                                    
+                    Lat = getFields(formedArr, "Lat");
+                    //console.log(Lat[i]);
+                    Lon = getFields(formedArr, "Lon");
+                    //console.log(Lon[i]);                   
+
+                    Status = getFields(formedArr, "Status");
+                    //console.log("Status" + Status[i]);    
+                
+                    Smoking = getFields(formedArr, "Smoking");
+                    //console.log("Smoking" + Smoking[i] + LNresult[i]); 
+
+                    if (Smoking[i] == "No") {
+                        imgSmk = "<img src='libs/icons/nSmk.png' style='width:40px;height:40px;'>"
+                    } else {
+                        imgSmk = ""
+                    }  
+                    //console.log(LNresult[i] + "Pets" + pets[i]);   
+                    if (pets[i] == "No"){
+                        imgPets = "<img src='libs/icons/noPets.png' style='width:40px;height:40px;'>";
+                    } else {
+                        imgPets = "";
+                    }                                          
+                    Link = getFields(formedArr, "Link");
+                    //console.log("Link" + smoker[i]); 
+                    if (Link[i]){
+                        Link = "<a href='" + Link[i] + "' target='_blank'>"
+                    } else {
+                        Link = "";
+                    }                    
                     
                     //console.log("Not" + onlyCharacters);
                     //console.log("passing" + onlyCharacters);
                     
-
-                    if(coCode != undefined){                 
-                        if(coCode.length==0){
-                            VOLdropdown += "<option>VOL Missing Eircode : " + FNresult[i] + " " + LNresult[i] + "</option>";
-                        } else {
-                            var onlyCharacters = coCode.replace(/ /g, "");
-                            //console.log("passing" + onlyCharacters);
-                            getLatLonf(onlyCharacters, FNresult[i], LNresult[i],Visit[i]);   
-                        }
-                    }
-                    i = i + 1; 
                     
-                    //console.log(FNresult, LNresult, EIRresult);
-                } while (i < iRecords);
+                    //console.log("passing" + onlyCharacters);
+                    var theIcon = "";
+                    switch(Status[i]){
+                        case "Active":
+                            theIcon = "libs/icons/VOLicon-active.png";
+                            break;
+                        case "FtAc":
+                            theIcon = "libs/icons/VOLicon-L.png";
+                            break;
+                        default :
+                            theIcon = "libs/icons/VOLicon.png";
+                            break;
+                    }
+    
+                    extraText = Link + "<img src=" + theIcon + " style='width:40px;height:40px;'>" + imgPets + imgSmk + "<br>Name : "+FNresult[i]+LNresult[i]+ "<br> Sex : "+Sex[i]+"<br> Age : "+Age[i];    
+                    extraText += "<br><br>We can add-in more data, latest information directly from salesforce as it is updated, for demonstration ourposes, we haven't";
 
-                //var FNresult = getFields(formedArr, "First Name"); // returns [ 1, 3, 5 ]
-                //console.log(iRecords + "counted");
-                //console.log(result[0]);
-                return formedArr;                         
+                    if(Lat[i] != undefined){getLatLonf(Lat[i], Lon[i], FNresult[i], LNresult[i], Status[i])}
+                i = i + 1; 
+                    //console.log(FNresult, LNresult, EIRresult);
+            } while (i < iRecords);
+
+            markerPopup.addTo(map)   
+            //var FNresult = getFields(formedArr, "First Name"); // returns [ 1, 3, 5 ]
+            //console.log(iRecords + "counted");
+            //console.log(result[0]);
+            return formedArr;                          
                       
             }
         }
@@ -89,18 +124,7 @@ function getFields(input, field) {
     return output;
 }
 
-function getLatLonf(curCCode, FNresult, LNresult,Status){
-        var strSearch = curCCode.toString();
-        //console.log(strSearch + "mark");
-        $.ajax({
-        url: "libs/php/getLocB.php",
-        async: true,
-        dataType: 'json',
-        data: {
-            ECode: strSearch,
-        },         
-        success: function (data) {
-
+function getLatLonf(thisLat, thisLng, FNresult, LNresult, Status){
       
       var VOLDatashow =
       {
@@ -108,30 +132,25 @@ function getLatLonf(curCCode, FNresult, LNresult,Status){
         'className' : 'VOL-popup'
       }        
 
-            //console.log("success");
-            var thisLat = (data['data']['results']['0']['geometry']['location']['lat']);
-            var thisLng = (data['data']['results']['0']['geometry']['location']['lng']);
-
-        //set the variables
-      //console.log(JSON.stringify(data)); 
       switch(Status){
         case "Active":
             VOLIcon = L.icon({
                 iconUrl: 'libs/icons/VOLicon-active.png',
-                iconSize: [25, 25],
+                iconSize: [35, 35],
               //    iconAnchor: [22, 94],
               //    popupAnchor: [-3, -76],
               //    shadowUrl: 'my-icon-shadow.png',
               //    shadowSize: [68, 95],
               //    shadowAnchor: [22, 94]
               });   
+              
               var VOLmarker = L.marker([thisLat, thisLng], {icon: VOLIcon}).addTo(VolAMarkers)
             break;
 
-        case "Fully trained/Awaiting checks":
+        case "FtAc":
             VOLIcon = L.icon({
                 iconUrl: 'libs/icons/VOLicon-L.png',
-                iconSize: [25, 25],
+                iconSize: [35, 35],
               //    iconAnchor: [22, 94],
               //    popupAnchor: [-3, -76],
               //    shadowUrl: 'my-icon-shadow.png',
@@ -143,7 +162,7 @@ function getLatLonf(curCCode, FNresult, LNresult,Status){
         default:
             VOLIcon = L.icon({
                 iconUrl: 'libs/icons/VOLicon.png',
-                iconSize: [25, 25],
+                iconSize: [35, 35],
               //    iconAnchor: [22, 94],
               //    popupAnchor: [-3, -76],
               //    shadowUrl: 'my-icon-shadow.png',
@@ -156,35 +175,11 @@ function getLatLonf(curCCode, FNresult, LNresult,Status){
   
 
             //var markerPopup = OPmarker.bindPopup('Vol Name : ' + FNresult + " " + LNresult, VOLData)
-            var markerPopup = VOLmarker.bindPopup('Name : ' + FNresult+ ' ' + LNresult + ":<br><br>Status : " + Status + "<br><br>" + extraText,VOLDatashow)
+            
+            var markerPopup = VOLmarker.bindPopup(extraText,VOLDatashow)
             markerPopup = VOLmarker.bindTooltip(FNresult + ' ' + LNresult);
             markerPopup = VOLmarker.on('mouseover', showHideTooltip);            
             //markerPopup.addTo(map)          
   
             //console.log(data);
           }
-      });      
-}
-
-function getLatLonB(curCCode){
-    //console.log(curCCode + "mark");
-    $.ajax({
-        url: "libs/php/getLocB.php",
-        async: true,
-        dataType: 'json',
-      data: {
-          coCode: curCCode,
-      },       
-        success: function (data) {
-          //console.log("success");
-          //console.log(data.latitude);
-          //console.log(data.longitude);
-
-          var OPmarker = L.marker([data.latitude, data.longitude], {icon: myIcon}).addTo(map)
-          var markerPopup = OPmarker.bindPopup('OP1, OP Address ' + OPmarker.getLatLng()).openPopup()
-          markerPopup.addTo(map)          
-
-          //console.log(data);
-        }
-      }); 
-  }

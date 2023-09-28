@@ -31,13 +31,11 @@ function readMOWTextFile(file)
                 })
                 //console.log(formedArr);
 
-                //go through the array, get lat, lon and add to map
-                //let result = '';
-                var coCode = '';
                 FNresult = '';
                 SNresult = '';
-                Visit = '';                
-                
+                Status = '';
+               
+                extraText = ' ';                
                 let i = 0;
                 
                 do {
@@ -45,34 +43,34 @@ function readMOWTextFile(file)
                     FNresult = getFields(formedArr, "Service Name");
                     //console.log(FNresult[i]);
                     LNresult = getFields(formedArr, " Address");
-                    //console.log(FNresult[i]);
-                    FNresult = getFields(formedArr, " Country");
-                    //console.log(FNresult[i]);                                                                           
-                    FNresult = getFields(formedArr, " County");
-                    //console.log(FNresult[i]);
-                    FNresult = getFields(formedArr, " Phone");
-                    //console.log(FNresult[i]);
-                    Town = getFields(formedArr, " Town");
-                    //console.log(FNresult[i]);                    
-                    var EIRresult = getFields(formedArr, " Eircode");
-                    coCode = EIRresult[i];
-                    //console.log("STEFZZZ" + coCode);
-                    var onlyCharacters = coCode.replace(/ /g, "");
+                    //console.log(LNresult[i]);                                                         
+                    county = getFields(formedArr, " County");
+                    //console.log(county[i]);
+                    phone = getFields(formedArr, " Phone");
+                    //console.log(phone[i]);
+                    Lat = getFields(formedArr, "Lat");
+                    //console.log(Lat[i]);
+                    Lon = getFields(formedArr, "Lon");
+                    //console.log(Lon[i]);   
+                    Link = getFields(formedArr, "Link");
+                    //console.log(Link[i]);                                                       
+
+                    //console.log("passing");
+
                     
-                    //console.log("Not" + onlyCharacters);
-                    //console.log("passing" + onlyCharacters);
-                                     
-                    if(coCode.length==0){
-                        //VOLdropdown += "<option>VOL Missing Eircode : " + FNresult[i] + " " + LNresult[i] + "</option>";
+                    if (Link[i] != undefined){
+                        //console.log("def" + Link[i])
+                        extraText = "<a href='" + Link[i] + "' target='_blank'><img src='libs/icons/MOW.png' style='width:40px;height:40px;'></a><br>"+FNresult[i]+"<br>"+LNresult[i]+"<br>"+phone[i]+"<br>";
                     } else {
-                        //console.log("passing" + onlyCharacters);
-                        getLatLonMOW(onlyCharacters, FNresult[i], LNresult[i]);   
-                    }
+                        //console.log("undef" + Link[i])
+                        extraText = "<img src='libs/icons/MOW.png' style='width:40px;height:40px;'><br>"+FNresult[i]+"<br>"+LNresult[i]+"<br>"+phone[i]+"<br>";
+                    }                       
+                    if(Lat[i] != undefined){getLatLonMOW(FNresult[i], LNresult[i], Lat[i], Lon[i])};   
                     i = i + 1;   
                     
-                    //console.log(FNresult, LNresult, EIRresult);
                 } while (i < iRecords);
 
+                markerPopup.addTo(map)   
                 //var FNresult = getFields(formedArr, "First Name"); // returns [ 1, 3, 5 ]
                 //console.log(iRecords + "counted");
                 //console.log(result[0]);
@@ -84,39 +82,14 @@ function readMOWTextFile(file)
     rawFile.send(null);
 }
 
-function getFields(input, field) {
-    var output = [];
-    for (var i=0; i < input.length ; ++i)
-        output.push(input[i][field]);
-    return output;
-}
-
-function getLatLonMOW(curCCode, FNresult, LNresult){
-        var strSearch = curCCode.toString();
-        //console.log(strSearch + "mark");
-        $.ajax({
-        url: "libs/php/getLocB.php",
-        async: true,
-        dataType: 'json',
-        data: {
-            ECode: strSearch,
-        },         
-        success: function (data) {
-
-      
+function getLatLonMOW(FNresult, LNresult, thisLat, thisLng){
+        
       var MOWDatashow =
       {
         'maxWidth': '400',
         'className' : 'MOW-popup'
-      }        
-
-            //console.log("success");
-            var thisLat = (data['data']['results']['0']['geometry']['location']['lat']);
-            var thisLng = (data['data']['results']['0']['geometry']['location']['lng']);
-
-        //set the variables
-      //console.log(JSON.stringify(data)); 
-
+      }      
+        
             MOWIcon = L.icon({
                 iconUrl: 'libs/icons/MOW.png',
                 iconSize: [25, 25],
@@ -125,39 +98,14 @@ function getLatLonMOW(curCCode, FNresult, LNresult){
               //    shadowUrl: 'my-icon-shadow.png',
               //    shadowSize: [68, 95],
               //    shadowAnchor: [22, 94]
-              });   
-              var MOWmarker = L.marker([thisLat, thisLng], {icon: MOWIcon}).addTo(MOWMarkers)
+              }); 
 
+              var MOWmarker = L.marker([thisLat, thisLng], {icon: MOWIcon}).addTo(MOWMarkers)
+               
             //var markerPopup = OPmarker.bindPopup('Vol Name : ' + FNresult + " " + LNresult, VOLData)
-            var markerPopup = MOWmarker.bindPopup('Name : ' + FNresult+ ' ' + LNresult + ":<br><br>Status : " + Status + "<br><br>" + extraText,VOLDatashow)
-            markerPopup = MOWmarker.bindTooltip('fxhgh ');
+            var markerPopup = MOWmarker.bindPopup(extraText,MOWDatashow)
+
+            markerPopup = MOWmarker.bindTooltip(FNresult + ' ' + LNresult);
             markerPopup = MOWmarker.on('mouseover', showHideTooltip);            
             //markerPopup.addTo(map)          
-  
-            //console.log(data);
           }
-      });      
-}
-
-function getLatLonB(curCCode){
-    //console.log(curCCode + "mark");
-    $.ajax({
-        url: "libs/php/getLocB.php",
-        async: true,
-        dataType: 'json',
-      data: {
-          coCode: curCCode,
-      },       
-        success: function (data) {
-          //console.log("success");
-          //console.log(data.latitude);
-          //console.log(data.longitude);
-
-          var OPmarker = L.marker([data.latitude, data.longitude], {icon: myIcon}).addTo(map)
-          var markerPopup = OPmarker.bindPopup('OP1, OP Address ' + OPmarker.getLatLng()).openPopup()
-          markerPopup.addTo(map)          
-
-          //console.log(data);
-        }
-      }); 
-  }

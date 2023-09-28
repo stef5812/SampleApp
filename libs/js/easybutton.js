@@ -5,11 +5,11 @@
     // then the usual `.addTo(map)`
     L.Control.EasyBar = L.Control.extend({
     
-      options: {
-        position:       'topleft',  // part of leaflet's defaults
-        id:             null,       // an id to tag the Bar with
-        leafletClasses: true        // use leaflet classes?
-      },
+      // options: {
+      //   position:       'topleft',  // part of leaflet's defaults
+      //   id:             null,       // an id to tag the Bar with
+      //   leafletClasses: true        // use leaflet classes?
+      // },
     
     
       initialize: function(buttons, options){
@@ -336,7 +336,7 @@
       // build the wrapper
       this.icon = L.DomUtil.create('span', '');
     
-      L.DomUtil.addClass(this.icon, 'button-state state-' + this.stateName.replace(/(^\s*|\s*$)/g,''));
+      L.DomUtil.addClass(this.icon, '-' + this.stateName.replace(/(^\s*|\s*$)/g,''));
       this.icon.innerHTML = buildIcon(template.icon);
       this.onClick = L.Util.bind(template.onClick?template.onClick:function(){}, easyButton);
     }

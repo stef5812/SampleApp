@@ -17,13 +17,16 @@ function readTextFile(file)
                 //console.log("bfffhj");
                 //console.log(allText);
 
+                iRecords = 0
+
                 const [keys, ...rest] = allText.trim().split('\n').map((item) => item.split(','))
     
                 const formedArr = rest.map((item) => {
                     const object = {}
                     keys.forEach((key, index) => object[key] = item.at(index))
                     //console.log(object);
-                    var result = getFields(object, "First Name"); 
+                    var result = getFields(object, "Surname"); 
+                    //console.log("bfffhj");
                     //console.log(result);
                     iRecords = iRecords + 1;
                     return object
@@ -35,49 +38,83 @@ function readTextFile(file)
                 
                 FNresult = '';
                 SNresult = '';
+                extraText = '';
 
-                OPdropdown += "<select>";
                 
                 let i = 0;
                 
                 do {
-                    
-                    pets = getFields(formedArr, "Do they have pets?");
-                    //console.log("Pets" + pets[i]);                    
-                    FNresult = getFields(formedArr, "First Name");
+                    imgPets = "";
+                    imgSmk = '';
+                                     
+                    FNresult = getFields(formedArr, "First");
                     //console.log(FNresult[i]);
-                    LNresult = getFields(formedArr, "Last Name");
+                    LNresult = getFields(formedArr, "Surname");
                     //console.log(LNresult[i]);                                    
-                    EIRresult = getFields(formedArr, "Eircode");
+                    Lat = getFields(formedArr, "Lat");
+                    //console.log(Lat[i]);
+                    Lon = getFields(formedArr, "Lon");
+                    //console.log(Lon[i]);                   
 
-                    Status = getFields(formedArr, "Status in Role");
-                    //console.log(Status[i]);    
-                    Support = getFields(formedArr, '"Support Coordinator "');
-                    //console.log(Support[i]);
+                    Status = getFields(formedArr, "Status");
+                    Age = getFields(formedArr, "Age");
+                    Sex = getFields(formedArr, "Sex");
+                        
+                    Support = getFields(formedArr, "CHN");
+                    //console.log("SC" + Support[i]);
                 
-                    smoker = getFields(formedArr, "Smoker?");
-                    //console.log("smoker" + smoker[i]);                    
-
-                    coCode = EIRresult[i];
+                    smoker = getFields(formedArr, "Smoker");
+                    //console.log("smoker" + smoker[i]); 
+                    if (smoker[i] == "Yes") {
+                        imgSmk = "<img src='libs/icons/smoker.png' style='width:40px;height:40px;'>"
+                    } else {
+                        imgSmk = ""
+                    }  
                     
-                    if(coCode != undefined){
-                        if(coCode.length==0){
-                            //console.log("OP Missing Eircode : " + FNresult[i] + " " + LNresult[i]);
-                            OPdropdown += "<option>OP Missing Eircode : " + FNresult[i] + " " + LNresult[i] + "</option>";
-                        } else {
-                            let onlyCharacters = coCode.replace(/ /g, "");
-                            getLatLon(onlyCharacters, FNresult[i], LNresult[i],Status[i], pets[i], smoker[i]);
-                        }  
-                    }                
-                    i = i + 1;
-                    //console.log(FNresult, LNresult, EIRresult);
-                } while (i < iRecords);
+                    pets = getFields(formedArr, "Pets");
+                    //console.log(LNresult[i] + "Pets" + pets[i]);     
+                    if (pets[i] == "Yes") {
+                        imgPets = "<img src='libs/icons/yPets.png' style='width:40px;height:40px;'>";
+                    } else {
+                        imgPets = "";
+                    };                     
+                    
+                    Link = getFields(formedArr, "Link");
+                    //console.log("Link" + smoker[i]); 
+                    if (Link[i]){
+                        Link = "<a href='" + Link[i] + "' target='_blank'>"
+                    } else {
+                        Link = "";
+                    }
 
+                    var theIcon = "";
+
+                    switch(Status[i]){
+                    case "Matched":
+                        theIcon = "libs/icons/OPicon-active.png";
+                        break;
+                    case "Re-match":
+                        theIcon = "libs/icons/OPicon-re.png";
+                        break;
+                    default :
+                        theIcon = "libs/icons/OPicon.png";
+                        break;
+                    };
+
+                    
+                    extraText = Link + "<img src=" + theIcon + " style='width:40px;height:40px;'></a>"+ imgPets+imgSmk+"<br>Name : "+FNresult[i]+LNresult[i] + "<br>Age : "+Age[i]+ "<br>Sex : "+Sex[i]+ "<br>SC : "+Support[i];    
+                    extraText += "<br><br>We have the capability to incorporate additional data, including the latest information sourced directly from Salesforce as it undergoes updates. For illustrative purposes, we have not yet implemented this feature. This supplementary data may encompass details such as the Inventory/Status of tech deliveries, along with the most recent case notes";
+
+                    if(Lat[i] != undefined){getOPLatLon(Lat[i], Lon[i], FNresult[i], LNresult[i], Status[i])}
+
+                    i = i + 1;
+                } while (i < iRecords);    
+                
                 markerPopup.addTo(map)   
                 //var FNresult = getFields(formedArr, "First Name"); // returns [ 1, 3, 5 ]
                 //console.log(iRecords + "counted");
                 //console.log(result[0]);
-                return formedArr;                         
+                return formedArr;   
                       
             }
         }
@@ -105,87 +142,72 @@ function customTip(ShortTip) {
       this.unbindTooltip();
   }
 
-function getLatLon(curCCode, FNresult, LNresult, Status, Pets, Smoker){
-        var customtip = FNresult + ' ' + LNresult;
-        var strSearch = curCCode.toString();
-        
-        $.ajax({
-        url: "libs/php/getLocB.php",
-        async: true,
-        dataType: 'json',
-        data: {
-            ECode: strSearch,
-        },         
-        success: function (data) {
-
-            var OPDatashow =
-            {
-              'maxWidth': '400',
-              'className' : 'OP-popup'
-            }              
-
-            //console.log("success");
-            var thisLat = (data['data']['results']['0']['geometry']['location']['lat']);
-            var thisLng = (data['data']['results']['0']['geometry']['location']['lng']);
-
-            switch (Status) {
-                case "Active":
-                    OPIcon = L.icon({
-                        iconUrl: 'libs/icons/OPicon-active.png',
-                        iconSize: [25, 25],
-                      //    iconAnchor: [22, 94],
-                      //    popupAnchor: [-3, -76],
-                      //    shadowUrl: 'my-icon-shadow.png',
-                      //    shadowSize: [68, 95],
-                      //    shadowAnchor: [22, 94]
-                    });                    
-                    var OPMarker = L.marker([thisLat, thisLng], {icon: OPIcon}).addTo(OpAMarkers)
-                    break;
-                case "To be Re-matched":
-                    OPIcon = L.icon({
-                        iconUrl: 'libs/icons/OPicon-re.png',
-                        iconSize: [25, 25],
-                      //    iconAnchor: [22, 94],
-                      //    popupAnchor: [-3, -76],
-                      //    shadowUrl: 'my-icon-shadow.png',
-                      //    shadowSize: [68, 95],
-                      //    shadowAnchor: [22, 94]
-                      }); 
-                    var OPMarker = L.marker([thisLat, thisLng], {icon: OPIcon}).addTo(OpTBRMMarkers)
-                    break;
-                default:
-                    OPIcon = L.icon({
-                        iconUrl: 'libs/icons/OPicon.png',
-                        iconSize: [25, 25],
-                      //    iconAnchor: [22, 94],
-                      //    popupAnchor: [-3, -76],
-                      //    shadowUrl: 'my-icon-shadow.png',
-                      //    shadowSize: [68, 95],
-                      //    shadowAnchor: [22, 94]
-                      });                     
-                    var OPMarker = L.marker([thisLat, thisLng], {icon: OPIcon}).addTo(OpTBMMarkers)
-                    break;
-            }            
-  
-//            var OPmarker = L.marker([thisLat, thisLng], {icon: OPIcon}).addTo(OpTBMMarkers)
-            var markerPopup = OPMarker.bindPopup('Name : ' + FNresult+ ' ' + LNresult + ":<br><br>Status : " + Status + "<br><br>" + extraText,OPDatashow)
-            console.log(curCCode + "mark");
-            varTooltip = FNresult + ' ' + LNresult
-            if (Pets == "Yes"){
-                console.log("ghghghgghttttt")
-                varTooltip += "  " + "<img src='libs/icons/dog.png' width='20' />"
+              function getOPLatLon(thisLat, thisLng, FNresult, LNresult, Status){
+                var OPDatashow =
+                {
+                  'maxWidth': '200',
+                  'className' : 'OP-popup'
+                }             
+                    switch (Status) {
+                        case "Matched":
+                            
+                            OPIcon = L.icon({
+                                iconUrl: 'libs/icons/OPicon-active.png',
+                                iconSize: [35, 35],
+                              //    iconAnchor: [22, 94],
+                              //    popupAnchor: [-3, -76],
+                              //    shadowUrl: 'my-icon-shadow.png',
+                              //    shadowSize: [68, 95],
+                              //    shadowAnchor: [22, 94]
+                            });                    
+                            var OPMarker = L.marker([thisLat, thisLng], {icon: OPIcon}).addTo(OpAMarkers)
+                            break;
+                        case "Re-match":
+                            
+                            OPIcon = L.icon({
+                                iconUrl: 'libs/icons/OPicon-re.png',
+                                iconSize: [35, 35],
+                              //    iconAnchor: [22, 94],
+                              //    popupAnchor: [-3, -76],
+                              //    shadowUrl: 'my-icon-shadow.png',
+                              //    shadowSize: [68, 95],
+                              //    shadowAnchor: [22, 94]
+                              }); 
+                            var OPMarker = L.marker([thisLat, thisLng], {icon: OPIcon}).addTo(OpTBRMMarkers)
+                            break;
+                        default:
+                            
+                            OPIcon = L.icon({
+                                iconUrl: 'libs/icons/OPicon.png',
+                                iconSize: [35, 35],
+                              //    iconAnchor: [22, 94],
+                              //    popupAnchor: [-3, -76],
+                              //    shadowUrl: 'my-icon-shadow.png',
+                              //    shadowSize: [68, 95],
+                              //    shadowAnchor: [22, 94]
+                              });                     
+                            var OPMarker = L.marker([thisLat, thisLng], {icon: OPIcon}).addTo(OpTBMMarkers)
+                            break;
+                            }
+            
+              //OPmarker = L.marker([thisLat, thisLng], {icon: OPIcon}).addTo(OpTBMMarkers)
+              var markerPopup = OPMarker.bindPopup(extraText, OPDatashow)
+              //console.log(curCCode + "mark");
+              var Tooltip = FNresult + ' ' + LNresult
+              // if (Pets == "Yes"){
+              //     console.log("ghghghgghttttt")
+              //     varTooltip += "  " + "<img src='libs/icons/dog.png' width='20' />"
+              // }
+              // if (Smoker == "Yes"){
+              //     varTooltip += "<img src='libs/icons/smoker.png' width='20' />"
+              // }            
+               
+              markerPopup = OPMarker.bindTooltip(Tooltip);
+              markerPopup = OPMarker.on('mouseover', showHideTooltip);
+            //   OPMarker.on('mouseover', customTip(FNresult+ ' ' + LNresult));
+            //   markerPopup.addTo(map)   
+            //   map.closePopup();       
+    
+              //console.log(data);
+                  
             }
-            if (Smoker == "Yes"){
-                varTooltip += "<img src='libs/icons/smoker.png' width='20' />"
-            }            
-             
-            markerPopup = OPMarker.bindTooltip(varTooltip);
-            markerPopup = OPMarker.on('mouseover', showHideTooltip);
-            //OPMarker.on('mouseover', customTip(FNresult+ ' ' + LNresult));
-            //markerPopup.addTo(map)   
-            //map.closePopup();       
-  
-            //console.log(data);
-          }
-      });      
-}

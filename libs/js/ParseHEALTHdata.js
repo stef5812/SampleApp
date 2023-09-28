@@ -55,6 +55,14 @@ function readHEALTHFile(file)
                     varY = getFields(formedArr, "lon");
                     //console.log(varY[i] + "STEF2"); 
                     
+                    
+                    if (Link[i] != undefined){
+                        //console.log("def" + Link[i])
+                        extraText = "<a href='" + Link[i] + "' target='_blank'><img src='libs/icons/health.png' style='width:40px;height:40px;'><br>"+FNresult[i]+"<br>"+Address[i]+"<br>";
+                    } else {
+                        //console.log("undef" + Link[i])
+                        extraText = "<img src='libs/icons/health.png' style='width:40px;height:40px;'><br>"+FNresult[i]+"<br>"+Address[i]+"<br>";
+                    }   
                     if(varX[i] != undefined){getHEALTHLatLon(varX[i], varY[i], FNresult[i], Address[i])}
 
                     //console.log(FNresult, LNresult, EIRresult);
@@ -99,12 +107,12 @@ function customTip(ShortTip) {
         var HEALTHDatashow =
         {
           'maxWidth': '400',
-          'className' : 'HOSP-popup'
+          'className' : 'HEALTH-popup'
         }              
 
                 HEALTHIcon = L.icon({
                     iconUrl: 'libs/icons/health.png',
-                    iconSize: [25, 25],
+                    iconSize: [35, 35],
                   //    iconAnchor: [22, 94],
                   //    popupAnchor: [-3, -76],
                   //    shadowUrl: 'my-icon-shadow.png',
@@ -115,7 +123,7 @@ function customTip(ShortTip) {
 
 
 //            var OPmarker = L.marker([thisLat, thisLng], {icon: OPIcon}).addTo(OpTBMMarkers)
-        var markerPopup = HEALTHMarker.bindPopup('Name : ' + HEALTHname + ' ' + ":<br><br>" + extraText, HEALTHDatashow)
+        var markerPopup = HEALTHMarker.bindPopup(extraText, HEALTHDatashow)
 
         varTooltip = HEALTHname;
         //if (Pets == "Yes"){

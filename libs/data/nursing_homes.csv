@@ -1,96 +1,99 @@
-﻿Service name,County,lat,lon,ig_xcord,ig_ycord,Address
-Abbeylands Nursing Home & Alzheimer Unit,Cork,52.2433,-8.43062,170635.1378,110208.8374,"Abbeylands Nursing Home & Alzheimer Unit, Carhoo, Kildorrery, Co. Cork, Cork"
-Amberley Home and Retirement Cottages,Cork,52.15249,-8.32881,177544.0772,100066.6778,"Amberley Home and Retirement Cottages, Acres, Fermoy, Co. Cork, Cork"
-Araglen House Nursing and Convalescent Home,Cork,52.1522,-9.08457,125815.0454,100537.8365,"Araglen House Nursing and Convalescent Home, Loumanagh, Boherbue, Mallow, Co Cork Cork"
-Ardsley Nursing Home,Cork,51.87449,-8.719,150531.2796,69327.16382,"Ardsley Nursing Home, Rocky Road, Farran, Co. Cork, Cork"
-Ballincollig Community Nursing Unit,Cork,51.88812,-8.58785,159575.964,70762.93167,"Ballincollig Community Nursing Unit, Murphy's Barracks, Ballincollig, Cork, Cork"
-Ballincurrig Care Centre Limited,Cork,51.98789,-8.22618,184511.6831,81724.89709,"Ballincurrig Care Centre, Ballincurrig, Leamlara, Co. Cork, Cork"
-Bandon Community Hospital,Cork,51.74713,-8.73695,149151.3607,55168.15099,"Bandon Community Hospital, Bandon, Co. Cork, Cork"
-Beaumont Residential Care,Cork,51.89011,-8.42382,170870.7827,70905.50105,"Beaumont Residential Care, Woodvale Road, Beaumont, Co. Cork, Cork"
-Bishopscourt Residential Care Ltd,Cork,51.87303,-8.52978,163561.4162,69053.31538,"Bishopscourt Residential Care, Liskillea, Waterfall, Co. Cork, Cork"
-Blairs Hill Nursing Home,Cork,51.89979,-8.49198,166185.1905,72011.51402,"Blair's Hill Nursing Home, Blair's Hill, Sunday's Well, Cork, Cork"
-Blarney Nursing and Retirement Home,Cork,51.94126,-8.59066,159430.3637,76676.35577,"Blarney Nursing Home, Killowen, Blarney, Co. Cork, Cork"
-Bridhaven Nursing Home,Cork,52.14506,-8.64332,156009.7923,99384.8752,"Bridhaven Nursing Home, Spa Glen, Mallow, Co. Cork, Cork"
-Brookfield Care Centre,Cork,51.97179,-8.2656,181797.0285,79942.80145,"Brookfield Care Centre, Leamlara, Co. Cork, Cork"
-Bushmount Nursing Home,Cork,51.6208,-8.8998,137731.4999,41239.24195,"Bushmount Nursing Home, Bushmount, Clonakilty, Co. Cork, Cork"
-Cahereen Care Centre,Cork,51.90672,-8.99652,131467.3731,73138.02027,"Cahereen Care Centre, Codrum, Macroom, Co. Cork, Cork"
-Cara House,Cork,51.54826,-9.26438,112342.33,33542.247,"Cara House, Market Street, Skibbereen, Co Cork, Cork"
-Carechoice Ballynoe,Cork,51.94287,-8.45413,168820.1616,76788.58297,"Carechoice Ballynoe, White's Cross, Co. Cork, Cork"
-Carechoice Clonakilty,Cork,51.61809,-8.90529,137347.3625,40941.58338,"Carechoice Clonakilty, Clogheen, Clonakilty, Co. Cork, Cork"
-Carechoice Macroom,Cork,51.90746,-8.97601,132880.059,73201.38279,"Carechoice Macroom, Gurteenroe, Macroom, Co. Cork, Cork"
-Carechoice Montenotte,Cork,51.90679,-8.4429,169568.1418,72769.03989,"Carechoice Montenotte, Middle Glanmire Road, Montenotte, Cork, Cork"
-Castletownbere Community Hospital,Cork,51.65597,-9.91146,67771.90658,46498.3437,"Castsletownbere Community Hospital, Castletownbere, Co. Cork, Cork"
-Clonakilty Community Hospital,Cork,51.62378,-8.88525,138743.309,41558.42098,"Clonakilty Community Hospital, Clonakilty, Co. Cork, Cork"
-Cobh Community Hospital,Cork,51.85511,-8.29942,179419.484,66968.9451,"Cobh Community Hospital, Cobh, Co. Cork, Cork"
-Cois Abhainn Residential Centre,Cork,51.96181,-7.86095,209608.312,78807.63587,"Cois Abhainn Residential Centre, Greencloyne, Youghal, Co. Cork, Cork"
-Conna Nursing Home,Cork,52.09354,-8.10715,192705.8061,93461.67206,"Conna Nursing Home, Conna, Mallow, Co. Cork, Cork"
-Corpus Christi Nursing Home,Cork,52.26264,-8.26894,181687.3364,112307.0179,"Corpus Christi Nursing Home, Brigown, Mitchelstown, Co. Cork, Cork"
-Cramers Court Nursing Home,Cork,51.73628,-8.481,166821.4344,53813.9587,"Cramer's Court Nursing Home, Belgooly, Kinsale, Co. Cork, Cork"
-Darraglynn Nursing Home,Cork,51.86662,-8.42736,170611.7445,68293.59749,"Darraglynn Nursing Home, Carrigaline Road, Douglas, Cork, Cork"
-Deerpark House,Cork,51.67932,-9.46046,99032.45874,48376.73295,"Deerpark House Nursing Home, Seafield, Bantry, Co. Cork, Cork"
-Douglas Nursing and Retirement Home,Cork,51.8612,-8.40221,172340.5273,67680.7942,"Douglas Nursing and Retirement Home, Moneygourney, Douglas, Cork, Cork"
-Dunmanway Community Hospital,Cork,51.7224,-9.1133,123117.3718,52746.37597,"Dunmanway Community Hospital, Dunmanway, Co. Cork, Cork"
-East Ferry House Nursing Home,Cork,51.85907,-8.20837,185694.3771,67387.58298,"East Ferry House Nursing Home, East Ferry, Midleton, Co. Cork, Cork"
-Fairfield Nursing Home,Cork,51.66157,-9.25984,112874.4279,46142.65662,"Fairfield Nursing Home, Quarry Road, Drimoleague, Co. Cork, Cork"
-Farranlea House Community Nursing Unit,Cork,51.892,-8.51583,164537.5819,71156.63348,"Farranlea House CNU, Farranlea Road, Wilton, Cork, Cork"
-Fermoy Community Hospital,Cork,52.13961,-8.25671,182473.9925,98614.01355,"Fermoy Community Hospital, Tallow Road, Fermoy, Co. Cork, Cork"
-Glanmire Residential Care Ltd.,Cork,51.92434,-8.38829,173337.1979,74700.20666,"Glanmire Residential Care Ltd., Glyntown, Glanmire, Co. Cork, Cork"
-Glendonagh Residential Home,Cork,51.97896,-8.09535,193498.3078,80711.68532,"Glendonagh Residential Home, Dungourney, Midleton, Co Cork, Cork"
-Grange Con Nursing Home,Cork,51.91773,-8.61179,157955.4367,74070.99782,"Grange Con Nursing Home, Coolatanavally, Carrigrohane, Co. Cork, Cork"
-Haven Bay Care Centre,Cork,51.70368,-8.53223,163255.5901,50210.77986,"Haven Bay Care Centre, Ballinacubby, Kinsale, Co. Cork, Cork"
-Heather House Community Nursing Unit,Cork,51.90497,-8.49722,165828.7856,72591.36043,"Heather House Community Nursing Unit, St Marys Orthopaedic Hospital, Gurranabraher, Cork, Cork"
-Kanturk Community Hospital,Cork,52.17746,-8.9065,138038.4266,103182.3185,"Kanturk Community Hospital, Kanturk, Co. Cork, Cork"
-Kinsale Community Hospital,Cork,51.70667,-8.52358,163855.9301,50539.97144,"Kinsale Community Hospital, Kinsale, Co. Cork, Cork"
-Macroom Community Hospital,Cork,51.90537,-8.96064,133934.6776,72954.37815,"Macroom Community Hospital, Macroom, Co. Cork, Cork"
-Maryborough Nursing Home,Cork,51.86254,-8.41135,171711.7027,67833.20714,"Maryborough Nursing Home, Maryborough Hill, Douglas, Cork, Cork"
-Midleton Community Hospital,Cork,51.91399,-8.17283,188156.8605,73491.91238,"Midleton Community Hospital, Midleton, Co. Cork, Cork"
-Mount Alvernia Hospital,Cork,52.11099,-8.69231,152619.7467,95624.73058,"Mount Alvernia Hospital, Newberry, Mallow, Cork, Cork"
-Mount Cara,Cork,51.90734,-8.47879,167098.895,72846.135,"Mount Cara, Redemption Road, Blackpool, Cork, Cork"
-Nazareth House,Cork,52.13816,-8.64936,155589.3493,98620.1154,"Nazareth House, Dromahane, Mallow, Co Cork, Cork"
-Norwood Grange,Cork,51.86355,-8.58119,160012.4612,68024.85275,"Norwood Grange, Ballinora, Waterfall, Cork, Cork"
-Oaklodge Nursing Home,Cork,51.82783,-8.08326,194310.0971,63894.28182,"Oaklodge Nursing Home, Churchtown South, Cloyne, Co. Cork, Cork"
-Padre Pio House Nursing Home,Cork,52.27209,-8.73031,150197.0455,113575.9128,"Padre Pio House Nursing Home, Churchtown, Mallow, Co. Cork, Cork"
-Padre Pio Nursing Home,Cork,51.86811,-8.36977,174579.2841,68437.03025,"Padre Pio Nursing Home, Sunnyside, Upper Rochestown, Cork, Cork"
-Powdermill Nursing Home,Cork,51.8929,-8.59188,159302.9301,71296.59192,"Powdermill Nursing Home, Gunpowder Mill, Ballincollig, Co. Cork, Cork"
-Rochestown Nursing Home,Cork,51.86793,-8.37052,174527.456,68417.02428,"Rochestown Nursing Home, Monastery Road, Rochestown, Co. Cork, Cork"
-Rosenalee Care Centre Ltd.,Cork,51.88964,-8.57844,160224.6728,70925.99494,"Rosenalee Care Centre, Poulavone, Ballincollig, Co. Cork, Cork"
-Skibbereen Community Hospital,Cork,51.56226,-9.26376,112412.1825,35098.87684,"Skibbereen Community Hospital, Coolnagarrane, Skibbereen, Co. Cork, Cork"
-Skibbereen Residential Care Centre,Cork,51.54294,-9.26908,112005.9394,32956.0694,"Skibbereen Residential Care Centre, Baltimore Road, Skibbereen, Co. Cork, Cork"
-St. Finbarr's Hospital,Cork,51.88963,-8.46109,168304.661,70867.65754,"St. Finbarr's Hospital, Douglas Road, Cork, Cork"
-St. Gabriel's Community Hospital,Cork,51.52415,-9.55315,92255.16967,31245.41822,"St. Gabriel's Community Hospital, Schull, Cork, Cork"
-St. Joseph's Community Hospital,Cork,52.06063,-9.06209,127204.9721,90326.73739,"St. Joseph's Community Hospital, Millstreet, Co. Cork, Cork"
-St. Joseph's Hospital,Cork,51.89971,-8.53322,163346.6886,72022.63408,"St. Joseph's Hospital, Bon Secours Care Village, Mount Desert, Lee Road, Cork"
-St. Joseph's Unit,Cork,51.68058,-9.45121,99675.29799,48504.15557,"St. Joseph's Unit, Bantry General Hospital, Bantry, Co. Cork, Cork"
-St. Luke's Home,Cork,51.89804,-8.39919,172571.3673,71778.77249,"St. Luke's Home, Castle Road, Mahon, Cork, Cork"
-St. Martha's Nursing Home,Cork,52.35666,-8.68808,153168.6602,122958.6012,"St. Martha's Nursing Home, Love Lane, Charleville, Co. Cork, Cork"
-St. Patricks Hospital Cork,Cork,51.90452,-8.46109,168315.1408,72524.9391,"St. Patrick's Hospital (Cork) Ltd., Curraheen Road, Curraheen, Cork, Cork"
-St.Stephens Unit 1,Cork,51.9543,-8.39981,172562.8623,78038.04274,"Unit 1 St Stephen's Hospital, Sarsfield Court, Glanmire, Cork, Cork"
-Strawhall Nursing Home,Cork,52.13824,-8.25744,182423.5091,98461.80289,"Strawhall Nursing Home, Strawhall, Fermoy, Co. Cork, Cork"
-Teach Altra Nursing Home,Cork,52.21597,-9.00399,131428.826,107554.6855,"Teach Altra Nursing Home, Scarteen, Newmarket, Co. Cork, Cork"
-Windmill House Nursing Home,Cork,52.27188,-8.72996,150220.2431,113552.3021,"Windmill House Nursing Home, Churchtown, Mallow, Co. Cork, Cork"
-Youghal Community Hospital,Cork,51.95602,-7.85624,209932.8144,78164.76669,"Youghal Community Hospital, Cork Hill, Youghal, Cork, Cork"
-Youghal and District Nursing Home,Cork,51.93007,-7.91484,205907.8009,75270.14693,"Youghal and District Nursing Home, Gortroe, Youghal, Co. Cork, Cork"
-Aras Mhuire Nursing Home,Kerry,52.44667,-9.49702,98262.93781,133805.6151,"Aras Mhuire Nursing Home, Greenville, Listowel, Co. Kerry, Kerry"
-Ashborough Lodge,Kerry,52.14056,-9.71766,82454.05045,100079.4471,"Ashborough Lodge, Lyre Road, Milltown, Co. Kerry, Kerry"
-Caherciveen Community Hospital,Kerry,51.94231,-10.23494,46365.09214,78989.01833,"Caherciveen Community Hospital, Valentia Road, Caherciveen, Co. Kerry, Kerry"
-Cuil Didin,Kerry,52.24649,-9.69065,84577.99384,111822.3747,"Cuil Didin, Skahanagh, Tralee, Co. Kerry, Kerry"
-Heatherlee Nursing Home,Kerry,52.11179,-9.51993,95923.26954,96576.74409,"Heatherlee Nursing Home, Lawlor's Cross, Tralee Road, Killarney, Kerry"
-Kenmare Community Nursing Unit- New Build,Kerry,51.88865,-9.58138,91173.953,71840.359,"Hospital Road, Kenmare, Co. Kerry, Kerry"
-Kenmare Nursing Home 'Tir na nOg',Kerry,51.86344,-9.60215,89682.5491,69066.60504,"Kenmare Nursing Home 'Tir na nOg', Killaha East, Kenmare, Co. Kerry, Kerry"
-Kilcara House Nursing Home,Kerry,52.41575,-9.39043,105443.6267,130219.8495,"Kilcara House Nursing Home, Kilcara, Duagh, Listowel, Co. Kerry Kerry"
-"Killarney Community Hospitals (Fuschia, Hawthorn and Heather Wards)",Kerry,52.06715,-9.51882,95895.83925,91608.71083,"Killarney Community Hospitals (Fuschia, Hawthorn and Heather Wards), St. Margaret's Road, Killarney, Co. Kerry Kerry"
-Killarney Nursing Home,Kerry,52.06343,-9.51607,96075.51813,91190.93023,"Killarney Nursing Home, Rock Road, Killarney, Co. Kerry, Kerry"
-Listowel Community Hospital,Kerry,52.44714,-9.49797,98199.84059,133859.3275,"Listowel Community Hospital St. Joseph's Ward, Listowel, Co. Kerry, Kerry"
-Lystoll Lodge Nursing Home,Kerry,52.44854,-9.44258,101968.3115,133938.3234,"Lystoll Lodge Nursing Home, Skehenerin, Listowel, Co. Kerry, Kerry"
-Oaklands Nursing home,Kerry,52.48217,-9.41978,103591.89,137650.0852,"Oaklands Nursing Home, Derry, Listowel, Co. Kerry, Kerry"
-Ocean View Retirement and Nursing Home,Kerry,52.22522,-9.89454,70591.84026,109800.7471,"Ocean View Retirement and Nursing Home, Knockglassmore, Camp, Tralee, Co. Kerry Kerry"
-Ospideal Pobail Chorca Dhuibhne (West Kerry Community Hospital),Kerry,52.14103,-10.26771,44802.64137,101166.1861,"BÃƒÂ³thar an Phoist, Daingean UÃƒÂ­ ChÃƒÂºis, Co. ChiarraÃƒÂ­"
-Our Lady of Fatima Home,Kerry,52.28214,-9.68513,85047.55318,115779.8671,"Our Lady of Fatima Home, Oakpark Road, Tralee, Co. Kerry, Kerry"
-Our Lady of Lourdes Care Facility,Kerry,52.05035,-9.46115,99812.85717,89657.67366,"Our Lady of Lourdes Care Facility, Kilcummin Village, Killarney, Co. Kerry, Kerry"
-Riverside Nursing Home,Kerry,52.34366,-9.69769,84350.84285,122645.6487,"Riverside Care Centre, Milltown, Abbeydorney, Tralee, Co. Kerry Kerry"
-St. Joseph's Home,Kerry,52.10676,-9.78441,77792.64268,96429.72078,"St. Joseph's Home, Killorglin, Co. Kerry, Kerry"
-St. Joseph's Nursing Home,Kerry,52.23939,-9.82902,75108.60423,111262.1839,"St. Joseph's Nursing Home, Derrymore East, Tralee, Co. Kerry, Kerry"
-St. Joseph's Nursing Home,Kerry,51.88453,-9.56756,92115.39325,71361.02096,"St. Joseph's Nursing Home, Killowen, Kenmare, Co. Kerry, Kerry"
-St. Louis Nursing Home,Kerry,52.26673,-9.70074,83942.18783,114091.0221,"St. Louis Nursing Home, Clonmore, Tralee, Co. Kerry, Kerry"
-Tralee Community Nursing Unit,Kerry,52.26974,-9.70528,83640.15865,114432.8954,"Tralee Community Nursing Unit, Tralee, Co. Kerry, Kerry"
-Valentia Hospital,Kerry,51.88972,-10.36715,37084.89684,73425.9021,"Valentia Hospital, Valentia Island, Co. Kerry, Kerry"
+﻿Service name,County,lat,lon,ig_xcord,ig_ycord,Address,Phone,Email,Website,other
+Abbeylands Nursing Home & Alzheimer Unit,Cork,52.2433,-8.43062,170635.1378,110208.8374,Abbeylands Nursing Home & Alzheimer Unit Carhoo Kildorrery Co. Cork Cork,022-25090,info@abbeylandsnursinghome.com,https://www.abbeylandsnursinghome.com,
+Amberley Home and Retirement Cottages,Cork,52.15249,-8.32881,177544.0772,100066.6778,Amberley Home and Retirement Cottages Acres Fermoy Co. Cork Cork,025 40900,directorofcare@amberleyhome.ie,https://www.amberleyhome.ie,
+Araglen House Nursing and Convalescent Home,Cork,52.1522,-9.08457,125815.0454,100537.8365,Araglen House Nursing and Convalescent Home Loumanagh Boherbue Mallow Co Cork Cork,029 76771,araglenhouse@gmail.com ,NA,
+Ardsley Nursing Home,Cork,51.87449,-8.719,150531.2796,69327.16382,Ardsley Nursing Home Rocky Road Farran Co. Cork Cork,021 733 1163 ,ardsleynursinghome@gmail.com ,NA,
+Aperee Living Churchtown,Cork,,,,,"Churchtown, Mallow, Co. Cork",022-23789,adminchurchtown@aperee.ie,https://aperee.ie/,
+Ballincollig Community Nursing Unit,Cork,51.88812,-8.58785,159575.964,70762.93167,Ballincollig Community Nursing Unit Murphy's Barracks Ballincollig Cork Cork,021-4620600,ballincollig@mowlamhealthcare.com,https://www.mowlamhealthcare.com/,
+Ballincurrig Care Centre Limited,Cork,51.98789,-8.22618,184511.6831,81724.89709,Ballincurrig Care Centre Ballincurrig Leamlara Co. Cork Cork,021 464 2130,elainemacg@gmail.com,NA,
+Bandon Community Hospital,Cork,51.74713,-8.73695,149151.3607,55168.15099,Bandon Community Hospital Bandon Co. Cork Cork,,,NA,
+Beaumont Residential Care,Cork,51.89011,-8.42382,170870.7827,70905.50105,Beaumont Residential Care Woodvale Road Beaumont Co. Cork Cork,021-4292195,admin@brccork.com,https://carechoice.ie/beaumont-residential-care,
+Bishopscourt Residential Care Ltd,Cork,51.87303,-8.52978,163561.4162,69053.31538,Bishopscourt Residential Care Liskillea Waterfall Co. Cork Cork,021-4885833,info@bishopscourt.ie ,https://www.bishopscourt.ie/,
+Blairs Hill Nursing Home,Cork,51.89979,-8.49198,166185.1905,72011.51402,Blair's Hill Nursing Home Blair's Hill Sunday's Well Cork Cork,021-4304229,patobrien09@yahoo.ie,NA,
+Blarney Nursing and Retirement Home,Cork,51.94126,-8.59066,159430.3637,76676.35577,Blarney Nursing Home Killowen Blarney Co. Cork Cork,021-4381631,brianblarney@gmail.com,NA,
+Bridhaven Nursing Home,Cork,52.14506,-8.64332,156009.7923,99384.8752,Bridhaven Nursing Home Spa Glen Mallow Co. Cork Cork,022 22205,info@bridhaven.ie,https://www.bridhaven.ie,
+Brookfield Care Centre,Cork,51.97179,-8.2656,181797.0285,79942.80145,Brookfield Care Centre Leamlara Co. Cork Cork,023-8833991,bushmountnursinghome@eircom.net,https://www.bushmountnursinghome.ie/,
+Bushmount Nursing Home,Cork,51.6208,-8.8998,137731.4999,41239.24195,Bushmount Nursing Home Bushmount Clonakilty Co. Cork Cork,,,NA,
+Cahereen Care Centre,Cork,51.90672,-8.99652,131467.3731,73138.02027,Cahereen Care Centre Codrum Macroom Co. Cork Cork,026-41280,cahereenrescare@eircom.net,NA,
+Cara House,Cork,51.54826,-9.26438,112342.33,33542.247,Cara House Market Street Skibbereen Co Cork Cork,,,NA,
+Carechoice Ballynoe,Cork,51.94287,-8.45413,168820.1616,76788.58297,Carechoice Ballynoe White's Cross Co. Cork Cork,021 4300534,ballynoe@carechoice.ie,https://www.carechoice.ie,
+Carechoice Brookfield,Cork,,,,,"Leamlara,  Co. Cork.  T56 YX21",021-4642642,hr@brookfieldcc.ie,https://www.carechoice.ie,
+Carechoice Clonakilty,Cork,51.61809,-8.90529,137347.3625,40941.58338,Carechoice Clonakilty Clogheen Clonakilty Co. Cork Cork,023 883 6300,clonakilty@carechoice.ie,https://www.carechoice.ie,
+Carechoice Macroom,Cork,51.90746,-8.97601,132880.059,73201.38279,Carechoice Macroom Gurteenroe Macroom Co. Cork Cork,026 42366,macroom@carechoice.ie,https://www.carechoice.ie,
+Carechoice Montenotte,Cork,51.90679,-8.4429,169568.1418,72769.03989,Carechoice Montenotte Middle Glanmire Road Montenotte Cork Cork,021 486 1777,montenotte@carechoice.ie,https://www.carechoice.ie,
+Castletownbere Community Hospital,Cork,51.65597,-9.91146,67771.90658,46498.3437,Castletownbere Community Hospital Castletownbere Co. Cork Cork,,,NA,
+Clonakilty Community Hospital,Cork,51.62378,-8.88525,138743.309,41558.42098,Clonakilty Community Hospital Clonakilty Co. Cork Cork,,,NA,
+Cobh Community Hospital,Cork,51.85511,-8.29942,179419.484,66968.9451,Cobh Community Hospital Cobh Co. Cork Cork,021 4811345,cobh.hospital@ireland.com,NA,
+Cois Abhainn Residential Centre,Cork,51.96181,-7.86095,209608.312,78807.63587,Cois Abhainn Residential Centre Greencloyne Youghal Co. Cork Cork,,,NA,
+Conna Nursing Home,Cork,52.09354,-8.10715,192705.8061,93461.67206,Conna Nursing Home Conna Mallow Co. Cork Cork,086 1806335,connanursinghome@gmail.com,https://www.connanursinghome.ie,
+Corpus Christi Nursing Home,Cork,52.26264,-8.26894,181687.3364,112307.0179,Corpus Christi Nursing Home Brigown Mitchelstown Co. Cork Cork,025-84844,corpuschristinh@eircom.net,NA,
+Cramers Court Nursing Home,Cork,51.73628,-8.481,166821.4344,53813.9587,Cramer's Court Nursing Home Belgooly Kinsale Co. Cork Cork,021-4770721,info@cramerscourt.com,https://www.cramerscourt.com/,
+Darraglynn Nursing Home,Cork,51.86662,-8.42736,170611.7445,68293.59749,Darraglynn Nursing Home Carrigaline Road Douglas Cork Cork,021-4364722,darraglynn1@eircom.net,NA,
+Deerpark House,Cork,51.67932,-9.46046,99032.45874,48376.73295,Deerpark House Nursing Home Seafield Bantry Co. Cork Cork,027 52711,info@deerparkhouse.ie,https://www.deerparkhouse.ie/,
+Douglas Nursing and Retirement Home,Cork,51.8612,-8.40221,172340.5273,67680.7942,Douglas Nursing and Retirement Home Moneygourney Douglas Cork Cork,021 4364264,david@douglasnursinghome.ie,https://www.douglasnursinghome.ie,
+Dunmanway Community Hospital,Cork,51.7224,-9.1133,123117.3718,52746.37597,Dunmanway Community Hospital Dunmanway Co. Cork Cork,,,NA,
+East Ferry House Nursing Home,Cork,51.85907,-8.20837,185694.3771,67387.58298,East Ferry House Nursing Home East Ferry Midleton Co. Cork Cork,021-4652538,annepatrica_wilson@hotmail.com,NA,
+Fairfield Nursing Home,Cork,51.66157,-9.25984,112874.4279,46142.65662,Fairfield Nursing Home Quarry Road Drimoleague Co. Cork Cork,028-31881,fairfielddrimoleague@eircom.net,NA,
+Farranlea House Community Nursing Unit,Cork,51.892,-8.51583,164537.5819,71156.63348,Farranlea House CNU Farranlea Road Wilton Cork Cork,,,NA,
+Fermoy Community Hospital,Cork,52.13961,-8.25671,182473.9925,98614.01355,Fermoy Community Hospital Tallow Road Fermoy Co. Cork Cork,,,NA,
+Glanmire Residential Care Ltd.,Cork,51.92434,-8.38829,173337.1979,74700.20666,Glanmire Residential Care Ltd. Glyntown Glanmire Co. Cork Cork,,,NA,
+Glendonagh Residential Home,Cork,51.97896,-8.09535,193498.3078,80711.68532,Glendonagh Residential Home Dungourney Midleton Co Cork Cork,021 466 8327,info@glendonaghnursinghome.ie,https://www.glendonaghnursinghome.ie,
+Glyntown Care Centre,Cork,,,,,"Glyntown, Glanmire, Co. Cork ",021 482 1500,info@glyntowncare.ie,https://www.glyntowncare.ie,
+Grange Con Nursing Home,Cork,51.91773,-8.61179,157955.4367,74070.99782,Grange Con Nursing Home Coolatanavally Carrigrohane Co. Cork Cork,021-4385479,grangecon@gmail.com,NA,
+Haven Bay Care Centre,Cork,51.70368,-8.53223,163255.5901,50210.77986,Haven Bay Care Centre Ballinacubby Kinsale Co. Cork Cork,021-4777328,info@havenbay.ie,https://www.havenbay.ie,
+Heather House Community Nursing Unit,Cork,51.90497,-8.49722,165828.7856,72591.36043,Heather House Community Nursing Unit St Marys Orthopaedic Hospital Gurranabraher Cork Cork,,,NA,
+Kanturk Community Hospital,Cork,52.17746,-8.9065,138038.4266,103182.3185,Kanturk Community Hospital Kanturk Co. Cork Cork,,,NA,
+Kinsale Community Hospital,Cork,51.70667,-8.52358,163855.9301,50539.97144,Kinsale Community Hospital Kinsale Co. Cork Cork,,,NA,
+Macroom Community Hospital,Cork,51.90537,-8.96064,133934.6776,72954.37815,Macroom Community Hospital Macroom Co. Cork Cork,,,NA,
+Maryborough Nursing Home,Cork,51.86254,-8.41135,171711.7027,67833.20714,Maryborough Nursing Home Maryborough Hill Douglas Cork Cork,021-4891586,office@maryboroughnh.com,https://www.maryboroughnh.com,
+Midleton Community Hospital,Cork,51.91399,-8.17283,188156.8605,73491.91238,Midleton Community Hospital Midleton Co. Cork Cork,,,NA,
+Mount Alvernia Hospital,Cork,52.11099,-8.69231,152619.7467,95624.73058,Mount Alvernia Hospital Newberry Mallow Cork Cork,,,NA,
+Mount Cara,Cork,51.90734,-8.47879,167098.895,72846.135,Mount Cara Redemption Road Blackpool Cork Cork,,,NA,
+Nazareth House,Cork,52.13816,-8.64936,155589.3493,98620.1154,Nazareth House Dromahane Mallow Co Cork Cork,022-21561,nazarethmallow@eircom.net,NA,
+Norwood Grange,Cork,51.86355,-8.58119,160012.4612,68024.85275,Norwood Grange Ballinora Waterfall Cork Cork,021-4873291,norwoodgrange@gmail.com,NA,
+Oaklodge Nursing Home,Cork,51.82783,-8.08326,194310.0971,63894.28182,Oaklodge Nursing Home Churchtown South Cloyne Co. Cork Cork,021 4646080,info@oaklodgenursinghome.ie,https://www.oaklodgenursinghome.ie/,
+Padre Pio House Nursing Home,Cork,52.27209,-8.73031,150197.0455,113575.9128,Padre Pio House Nursing Home Churchtown Mallow Co. Cork Cork,021-4841595,padrepiorochestown@eircom.net,NA,
+Padre Pio Nursing Home,Cork,51.86811,-8.36977,174579.2841,68437.03025,Padre Pio Nursing Home Sunnyside Upper Rochestown Cork Cork,021-4841595,padrepiorochestown@eircom.net,NA,
+Powdermill Nursing Home,Cork,51.8929,-8.59188,159302.9301,71296.59192,Powdermill Nursing Home Gunpowder Mill Ballincollig Co. Cork Cork,021-4871184,powdermillnursing.home@gmail.com,https://www.powdermillnursing.com,
+Rochestown Nursing Home,Cork,51.86793,-8.37052,174527.456,68417.02428,Rochestown Nursing Home Monastery Road Rochestown Co. Cork Cork,021-4841707,rochestownnursinghome@yahoo.ie ,NA,
+Rosenalee Care Centre Ltd.,Cork,51.88964,-8.57844,160224.6728,70925.99494,Rosenalee Care Centre Poulavone Ballincollig Co. Cork Cork,,,NA,
+Skibbereen Community Hospital,Cork,51.56226,-9.26376,112412.1825,35098.87684,Skibbereen Community Hospital Coolnagarrane Skibbereen Co. Cork Cork,,,NA,
+Skibbereen Residential Care Centre,Cork,51.54294,-9.26908,112005.9394,32956.0694,Skibbereen Residential Care Centre Baltimore Road Skibbereen Co. Cork Cork,,,NA,
+St. Finbarr's Hospital,Cork,51.88963,-8.46109,168304.661,70867.65754,St. Finbarr's Hospital Douglas Road Cork Cork,,,NA,
+St. Gabriel's Community Hospital,Cork,51.52415,-9.55315,92255.16967,31245.41822,St. Gabriel's Community Hospital Schull Cork Cork,,,NA,
+St. Joseph's Community Hospital,Cork,52.06063,-9.06209,127204.9721,90326.73739,St. Joseph's Community Hospital Millstreet Co. Cork Cork,,,NA,
+St. Joseph's Hospital,Cork,51.89971,-8.53322,163346.6886,72022.63408,St. Joseph's Hospital Bon Secours Care Village Mount Desert Lee Road Cork,,,NA,
+St. Joseph's Unit,Cork,51.68058,-9.45121,99675.29799,48504.15557,St. Joseph's Unit Bantry General Hospital Bantry Co. Cork Cork,,,NA,
+St. Luke's Home,Cork,51.89804,-8.39919,172571.3673,71778.77249,St. Luke's Home Castle Road Mahon Cork Cork,021-4359444,info@stlukeshome.ie,https://www.stlukeshome.ie,
+St. Martha's Nursing Home,Cork,52.35666,-8.68808,153168.6602,122958.6012,St. Martha's Nursing Home Love Lane Charleville Co. Cork Cork,063-30750,adminstmarthas@ehg.ie,https://www.mowlamhealthcare.com/,
+St. Patricks Hospital Cork,Cork,51.90452,-8.46109,168315.1408,72524.9391,St. Patrick's Hospital (Cork) Ltd. Curraheen Road Curraheen Cork Cork,,,NA,
+St.Stephens Unit 1,Cork,51.9543,-8.39981,172562.8623,78038.04274,Unit 1 St Stephen's Hospital Sarsfield Court Glanmire Cork Cork,,,NA,
+Strawhall Nursing Home,Cork,52.13824,-8.25744,182423.5091,98461.80289,Strawhall Nursing Home Strawhall Fermoy Co. Cork Cork,025-31678,strawhallnursinghome@eircom.net ,https://www.strawhallnursinghome.ie/,
+Teach Altra Nursing Home,Cork,52.21597,-9.00399,131428.826,107554.6855,Teach Altra Nursing Home Scarteen Newmarket Co. Cork Cork,029-61166,hello@teachaltranursinghome.ie,https://evergreencare.ie,
+Windmill House Nursing Home,Cork,52.27188,-8.72996,150220.2431,113552.3021,Windmill House Nursing Home Churchtown Mallow Co. Cork Cork,022 59067,care@windmillhealthcare.ie,https://windmillhealthcare.ie,
+Youghal Community Hospital,Cork,51.95602,-7.85624,209932.8144,78164.76669,Youghal Community Hospital Cork Hill Youghal Cork Cork,,,NA,
+Youghal and District Nursing Home,Cork,51.93007,-7.91484,205907.8009,75270.14693,Youghal and District Nursing Home Gortroe Youghal Co. Cork Cork,024 90280,youghalnursinghome@eircom.net,https://www.youghalnursinghome.ie/,
+Aras Mhuire Nursing Home,Kerry,52.44667,-9.49702,98262.93781,133805.6151,Aras Mhuire Nursing Home Greenville Listowel Co. Kerry Kerry,,,NA,
+Ashborough Lodge,Kerry,52.14056,-9.71766,82454.05045,100079.4471,Ashborough Lodge Lyre Road Milltown Co. Kerry Kerry,,,NA,
+Caherciveen Community Hospital,Kerry,51.94231,-10.23494,46365.09214,78989.01833,Caherciveen Community Hospital Valentia Road Caherciveen Co. Kerry Kerry,,,NA,
+Cuil Didin,Kerry,52.24649,-9.69065,84577.99384,111822.3747,Cuil Didin Skahanagh Tralee Co. Kerry Kerry,,,NA,
+Heatherlee Nursing Home,Kerry,52.11179,-9.51993,95923.26954,96576.74409,Heatherlee Nursing Home Lawlor's Cross Tralee Road Killarney Kerry,,,NA,
+Kenmare Community Nursing Unit- New Build,Kerry,51.88865,-9.58138,91173.953,71840.359,Hospital Road Kenmare Co. Kerry Kerry,,,NA,
+Kenmare Nursing Home 'Tir na nOg',Kerry,51.86344,-9.60215,89682.5491,69066.60504,Kenmare Nursing Home 'Tir na nOg' Killaha East Kenmare Co. Kerry Kerry,,,NA,
+Kilcara House Nursing Home,Kerry,52.41575,-9.39043,105443.6267,130219.8495,Kilcara House Nursing Home Kilcara Duagh Listowel Co. Kerry Kerry,,,NA,
+"Killarney Community Hospitals (Fuschia, Hawthorn and Heather Wards)",Kerry,52.06715,-9.51882,95895.83925,91608.71083,"Killarney Community Hospitals (Fuschia, Hawthorn and Heather Wards) St. Margaret's Road Killarney Co. Kerry Kerry",,,NA,
+Killarney Nursing Home,Kerry,52.06343,-9.51607,96075.51813,91190.93023,Killarney Nursing Home Rock Road Killarney Co. Kerry Kerry,,,NA,
+Listowel Community Hospital,Kerry,52.44714,-9.49797,98199.84059,133859.3275,Listowel Community Hospital St. Joseph's Ward Listowel Co. Kerry Kerry,,,NA,
+Lystoll Lodge Nursing Home,Kerry,52.44854,-9.44258,101968.3115,133938.3234,Lystoll Lodge Nursing Home Skehenerin Listowel Co. Kerry Kerry,,,NA,
+Oaklands Nursing home,Kerry,52.48217,-9.41978,103591.89,137650.0852,Oaklands Nursing Home Derry Listowel Co. Kerry Kerry,,,NA,
+Ocean View Retirement and Nursing Home,Kerry,52.22522,-9.89454,70591.84026,109800.7471,Ocean View Retirement and Nursing Home Knockglassmore Camp Tralee Co. Kerry Kerry,,,NA,
+Ospideal Pobail Chorca Dhuibhne (West Kerry Community Hospital),Kerry,52.14103,-10.26771,44802.64137,101166.1861,BÃƒÂ³thar an Phoist Daingean UÃƒÂ­ ChÃƒÂºis Co. ChiarraÃƒÂ­,,,NA,
+Our Lady of Fatima Home,Kerry,52.28214,-9.68513,85047.55318,115779.8671,Our Lady of Fatima Home Oakpark Road Tralee Co. Kerry Kerry,,,NA,
+Our Lady of Lourdes Care Facility,Kerry,52.05035,-9.46115,99812.85717,89657.67366,Our Lady of Lourdes Care Facility Kilcummin Village Killarney Co. Kerry Kerry,,,NA,
+Riverside Nursing Home,Kerry,52.34366,-9.69769,84350.84285,122645.6487,Riverside Care Centre Milltown Abbeydorney Tralee Co. Kerry Kerry,,,NA,
+St. Joseph's Home,Kerry,52.10676,-9.78441,77792.64268,96429.72078,St. Joseph's Home Killorglin Co. Kerry Kerry,,,NA,
+St. Joseph's Nursing Home,Kerry,52.23939,-9.82902,75108.60423,111262.1839,St. Joseph's Nursing Home Derrymore East Tralee Co. Kerry Kerry,,,NA,
+St. Joseph's Nursing Home,Kerry,51.88453,-9.56756,92115.39325,71361.02096,St. Joseph's Nursing Home Killowen Kenmare Co. Kerry Kerry,,,NA,
+St. Louis Nursing Home,Kerry,52.26673,-9.70074,83942.18783,114091.0221,St. Louis Nursing Home Clonmore Tralee Co. Kerry Kerry,,,NA,
+Tralee Community Nursing Unit,Kerry,52.26974,-9.70528,83640.15865,114432.8954,Tralee Community Nursing Unit Tralee Co. Kerry Kerry,,,NA,
+Valentia Hospital,Kerry,51.88972,-10.36715,37084.89684,73425.9021,Valentia Hospital Valentia Island Co. Kerry Kerry,,,NA,

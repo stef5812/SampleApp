@@ -18,31 +18,41 @@
     getLocation();
     //getLatLon();
     //getLatLonB();
-    readTextFile("libs/data/OPData.csv");
-    OPdropdown += '</select>';
+    readTextFile("libs/data/new-OP-data.csv");
+
     //console.log(OPdropdown);    
     readVOLTextFile("libs/data/VOLData.csv");
-    VOLdropdown += '</select>';
+    //VOLdropdown += '</select>';
+    
     //console.log(VOLdropdown);
     readHospitalsFile("libs/data/listofhospitalsinireland.csv"); 
     readPHARMFile("libs/data/pharmacies.csv");   
     readDENTFile("libs/data/dental_practices.csv");
     readHEALTHFile("libs/data/listofhealthcentresinireland.csv");
     readNursingFile("libs/data/nursing_homes.csv");
+    
     readMOWTextFile("libs/data/MOW.csv");
     
+    readGARDAFile("libs/data/Garda.csv");
 
+    readAUTHFile("libs/data/Council.csv");    
+
+    readCHIMEFile("libs/data/Chime.csv");    
+    readWHEELFile("libs/data/wheelchair.csv");    
+    readNCBIFile("libs/data/NCBI.csv");    
+    readALZFile("libs/data/ALZ.csv");    
+    readMABSFile("libs/data/MABS.csv"); 
     //console.log(OPArray);
     //CSVToArray(csvOPData, ",");
 
-    L.marker([52.9, -8.49], {icon: greenIcon}).addTo(map); 
+    //L.marker([52.9, -8.49], {icon: greenIcon}).addTo(map); 
 
     var OPlegend = L.control({position: 'topright'});
     OPlegend.onAdd = function (map) {
         var div = L.DomUtil.create('div', 'info legend');
         //console.log("jgbdjkfxol" + OPdropdown);
         div.innerHTML = OPdropdown;
-        div.firstChild.onmousedown = div.firstChild.ondblclick = L.DomEvent.stopPropagation;
+        //div.firstChild.onmousedown = div.firstChild.ondblclick = L.DomEvent.stopPropagation;
         return div;
     };
     OPlegend.addTo(map);
@@ -53,7 +63,7 @@
         //console.log(VOLdropdown);
         div.innerHTML = VOLdropdown;
 
-        div.firstChild.onmousedown = div.firstChild.ondblclick = L.DomEvent.stopPropagation;
+        //div.firstChild.onmousedown = div.firstChild.ondblclick = L.DomEvent.stopPropagation;
         return div;
     };  
     VOLlegend.addTo(map)  
@@ -93,7 +103,7 @@
   //gLobal variables set 
   var varTooltip = '';
 
-  var extraText = 'There can be more text added to these boxes, at the moment i havent added any <br><br>It might be useful just to give more details befor ea link to the OP or vol themselves';
+  var extraText = "There can be more text added to these boxes, at the moment i haven't added any <br><br>It might be useful just to give more details before a link to the OP or vol themselves";
 
   var FNresult = '';
   var LNresult = '';
@@ -139,13 +149,13 @@
     //check return, add to input text for future use
     curLat = position.coords.latitude;
     $('#inpLat').val(curLat);
-    console.log('Latitude: ' + curLat);
-    console.log($('#inpLat').val())
+    //console.log('Latitude: ' + curLat);
+    //console.log($('#inpLat').val())
 
     //check return, add to input text for future use
     curLng = position.coords.longitude;
     $('#inpLng').val(curLng);
-    console.log('Longitude: ' + curLng);
-    console.log($('#inpLng').val())
+    //console.log('Longitude: ' + curLng);
+    //console.log($('#inpLng').val())
   }
 

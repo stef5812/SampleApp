@@ -54,7 +54,14 @@ function readPHARMFile(file)
                     //console.log(varX[i] + "STEF1");    
                     varY = getFields(formedArr, "lon");
                     //console.log(varY[i] + "STEF2"); 
-                    
+                    if (Link[i] != undefined){
+                        //console.log("def" + Link[i])
+                        extraText = "<a href='" + Link[i] + "' target='_blank'><img src='libs/icons/phar.png' style='width:40px;height:40px;'><br>"+FNresult[i]+"<br>"+Address[i]+"<br>";
+                    } else {
+                        //console.log("undef" + Link[i])
+                        extraText = "<img src='libs/icons/phar.png' style='width:40px;height:40px;'><br>"+FNresult[i]+"<br>"+Address[i]+"<br>";
+                    }                    
+                    //extraText = "<a href='" + Link[i] + "' target='_blank'><img src='libs/icons/phar.png' style='width:40px;height:40px;'><br>"+FNresult[i]+"<br>"+Address[i]+"<br>";
                     if(varX[i] != undefined){getPHARLatLon(varX[i], varY[i], FNresult[i], Address[i])}
                     i = i + 1;
                     //console.log(FNresult, LNresult, EIRresult);
@@ -98,11 +105,11 @@ function customTip(ShortTip) {
         var PHARDatashow =
         {
           'maxWidth': '400',
-          'className' : 'HOSP-popup'
+          'className' : 'PHAR-popup'
         }              
 
                 PHARIcon = L.icon({
-                    iconUrl: 'libs/icons/pharm.jpg',
+                    iconUrl: 'libs/icons/phar.png',
                     iconSize: [25, 25],
                   //    iconAnchor: [22, 94],
                   //    popupAnchor: [-3, -76],
@@ -114,7 +121,7 @@ function customTip(ShortTip) {
 
 
 //            var OPmarker = L.marker([thisLat, thisLng], {icon: OPIcon}).addTo(OpTBMMarkers)
-        var markerPopup = PHARMarker.bindPopup('Name : ' + PHARname + ' ' + ":<br><br>" + extraText, PHARDatashow)
+        var markerPopup = PHARMarker.bindPopup(extraText, PHARDatashow)
 
         varTooltip = PHARname;
         //if (Pets == "Yes"){

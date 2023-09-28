@@ -43,11 +43,18 @@ function readNursingFile(file)
                 let i = 0;
                 
                 do {
-                    
+                    Link = "";
                     FNresult = getFields(formedArr, "Service name");
                     //console.log(FNresult[i]);
                     Address = getFields(formedArr, "Address");
-                    //console.log(Address[i]);                                    
+                    //console.log(Address[i]);  
+
+                    phone = getFields(formedArr, "Phone");
+                    //console.log(phone[i]);  
+                    email = getFields(formedArr, "Email");
+                    //console.log(email[i]);
+                    Link = getFields(formedArr, "Website");
+                    //console.log(Link[i]);                                                                          
                     //EIRresult = getFields(formedArr, "eircode");
 
                     varX = getFields(formedArr, "lat");
@@ -55,6 +62,14 @@ function readNursingFile(file)
                     varY = getFields(formedArr, "lon");
                     //console.log(varY[i] + "STEF2"); 
                     
+                    
+                    if (Link[i] != "NA"){
+                        //console.log("def" + Link[i])
+                        extraText = "<a href='" + Link[i] + "' target='_blank'><img src='libs/icons/nursing.png' style='width:40px;height:40px;'></a><br>"+Address[i]+"<br>"+phone[i]+"<br>"+email[i]+"<br>";
+                    } else {
+                        //console.log("undef" + Link[i])
+                        extraText = "<img src='libs/icons/nursing-nolink.png' style='width:40px;height:40px;'><br>"+Address[i]+"<br>"+phone[i]+"<br>"+email[i]+"<br>";
+                    }                       
                     if(varX[i] != undefined){getNURSELatLon(varX[i], varY[i], FNresult[i], Address[i])}
                     i = i + 1;
                     //console.log(FNresult, LNresult, EIRresult);
@@ -98,12 +113,12 @@ function customTip(ShortTip) {
         var NURSEDatashow =
         {
           'maxWidth': '400',
-          'className' : 'HOSP-popup'
+          'className' : 'NURSE-popup'
         }              
 
                 NURSEIcon = L.icon({
                     iconUrl: 'libs/icons/nursing.png',
-                    iconSize: [25, 25],
+                    iconSize: [35, 35],
                   //    iconAnchor: [22, 94],
                   //    popupAnchor: [-3, -76],
                   //    shadowUrl: 'my-icon-shadow.png',
@@ -114,7 +129,7 @@ function customTip(ShortTip) {
 
 
 //            var OPmarker = L.marker([thisLat, thisLng], {icon: OPIcon}).addTo(OpTBMMarkers)
-        var markerPopup = NURSEMarker.bindPopup('Name : ' + NURSEname + ' ' + ":<br><br>" + extraText, NURSEDatashow)
+        var markerPopup = NURSEMarker.bindPopup(extraText, NURSEDatashow)
 
         varTooltip = NURSEname;
         //if (Pets == "Yes"){
